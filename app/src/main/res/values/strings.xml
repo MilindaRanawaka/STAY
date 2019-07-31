@@ -3,4 +3,8 @@
     <string name="uName">User Name</string>
     <string name="pwd">Password</string>
     <string name="log">Log In</string>
+    <string name="food">Food</string>
+    <string name="pay">Payment</string>
+    <string name="leave">Leave</string>
+    <string name="stu">Student</string>
 </resources>
