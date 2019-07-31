@@ -7,4 +7,6 @@
     <string name="pay">Payment</string>
     <string name="leave">Leave</string>
     <string name="stu">Student</string>
+    <string name="room">Room</string>
+    <string name="adi">Additional</string>
 </resources>
