@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">STAY</string>
+    <string name="uName">User Name</string>
+    <string name="pwd">Password</string>
+    <string name="log">Log In</string>
 </resources>
