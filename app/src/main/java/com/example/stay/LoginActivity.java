@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextView tv1,tv2;
-    String str1,str2;
+    EditText tv1;
+    String str1;
+    int num1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,17 +20,17 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLogin(View view){
+
         tv1 = findViewById(R.id.unText);
-        tv2 = findViewById(R.id.pwdText);
 
         str1 = tv1.getText().toString();
-        str2 = tv2.getText().toString();
+        num1 = Integer.parseInt(str1);
 
-        if((str1 == "1")&&(str2 == "1")){
+
+        if(num1 == 1){
             tv1.setText("ADMIN");
-        } else if((str1 == "2")&&(str2 == "2")){
+        } else if(num1 == 2){
             tv1.setText("User");
         }
-
     }
 }
