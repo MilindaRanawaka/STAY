@@ -9,9 +9,8 @@
     <string name="Mstu">Manage Boarders</string>
     <string name="Mroom">Manage Rooms</string>
 
-    <string name="Bfood">Manage Food</string>
-    <string name="Bpay">Manage Payment</string>
-    <string name="Bleave">Manage Leave</string>
-    <string name="Bstu">Manage Boarders</string>
-    <string name="Broom">Manage Rooms</string>
+    <string name="Bprofile">My Profile</string>
+    <string name="Bfood">Food</string>
+    <string name="Bpay">Payment</string>
+    <string name="Bleave">Leave</string>
 </resources>
