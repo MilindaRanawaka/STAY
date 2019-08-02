@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,8 +31,8 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(this,ManagementHomeActivity.class);
             startActivity(intent);
         } else if(num1 == 2){
-            tv1.setText("User");
+            Intent intent2 = new Intent(this, BoardersHomeActivity.class);
+            startActivity(intent2);
         }
     }
 }
-//new

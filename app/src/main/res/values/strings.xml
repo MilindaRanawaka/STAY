@@ -3,10 +3,15 @@
     <string name="uName">User Name</string>
     <string name="pwd">Password</string>
     <string name="log">Log In</string>
-    <string name="food">Food</string>
-    <string name="pay">Payment</string>
-    <string name="leave">Leave</string>
-    <string name="stu">Student</string>
-    <string name="room">Room</string>
-    <string name="adi">Additional</string>
+    <string name="Mfood">Manage Food</string>
+    <string name="Mpay">Manage Payment</string>
+    <string name="Mleave">Manage Leave</string>
+    <string name="Mstu">Manage Boarders</string>
+    <string name="Mroom">Manage Rooms</string>
+
+    <string name="Bfood">Manage Food</string>
+    <string name="Bpay">Manage Payment</string>
+    <string name="Bleave">Manage Leave</string>
+    <string name="Bstu">Manage Boarders</string>
+    <string name="Broom">Manage Rooms</string>
 </resources>

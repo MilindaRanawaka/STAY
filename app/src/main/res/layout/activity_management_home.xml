@@ -8,49 +8,20 @@
     tools:context=".ManagementHomeActivity">
 
     <Button
-        android:id="@+id/addiBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="95dp"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
-        android:layout_marginBottom="263dp"
-        android:text="@string/adi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/payBtn"
-        app:layout_constraintTop_toBottomOf="@+id/leaveBtn" />
-
-    <Button
         android:id="@+id/roomBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginRight="85dp"
-        android:layout_marginBottom="37dp"
-        android:text="@string/room"
-        app:layout_constraintBottom_toTopOf="@+id/leaveBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/Mroom"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="256dp" />
 
     <Button
         android:id="@+id/stuBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginLeft="53dp"
-        android:layout_marginTop="239dp"
-        android:layout_marginEnd="97dp"
-        android:layout_marginRight="97dp"
-        android:layout_marginBottom="56dp"
-        android:text="@string/stu"
-        app:layout_constraintBottom_toTopOf="@+id/foodBtn"
-        app:layout_constraintEnd_toStartOf="@+id/roomBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/Mstu"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="237dp" />
 
     <Button
         android:id="@+id/leaveBtn"
@@ -61,9 +32,7 @@
         android:layout_marginTop="37dp"
         android:layout_marginEnd="85dp"
         android:layout_marginRight="85dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/leave"
-        app:layout_constraintBottom_toTopOf="@+id/addiBtn"
+        android:text="@string/Mleave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/foodBtn"
         app:layout_constraintTop_toBottomOf="@+id/roomBtn" />
@@ -74,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="53dp"
         android:layout_marginLeft="53dp"
-        android:text="@string/food"
+        android:text="@string/Mfood"
         app:layout_constraintBaseline_toBaselineOf="@+id/leaveBtn"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -82,9 +51,7 @@
         android:id="@+id/payBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginLeft="53dp"
-        android:text="@string/pay"
-        app:layout_constraintBaseline_toBaselineOf="@+id/addiBtn"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="@string/Mpay"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="438dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
