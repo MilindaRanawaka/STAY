@@ -42,4 +42,5 @@
     <string name="name">Name</string>
     <string name="name1">Alice</string>
     <string name="bID">B001</string>
+    <string name="updateDetail">Update Details</string>
 </resources>
