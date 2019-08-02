@@ -18,4 +18,9 @@ public class BoardersHomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this,BoarderManageActivity.class);
         startActivity(intent);
     }
+
+    public void onRequFood(View view){
+        Intent foodIntent = new Intent(this,BoarderFoodActivity.class);
+        startActivity(foodIntent);
+    }
 }

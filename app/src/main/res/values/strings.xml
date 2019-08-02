@@ -43,4 +43,15 @@
     <string name="name1">Alice</string>
     <string name="bID">B001</string>
     <string name="updateDetail">Update Details</string>
+
+    <string name="btnAdd">Add Order</string>
+    <string name="btnView">View Order</string>
+    <string name="btnDelete">Delete Order</string>
+    <string name="btnUpdate">Update Order</string>
+    <string name="tvname">Name</string>
+    <string name="tvRno">Room Number</string>
+    <string name="listFood">Food List</string>
+    <string name="tvFood">Food List</string>
+    <string name="btnOrder">Order</string>
+
 </resources>
