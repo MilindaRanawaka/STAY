@@ -37,3 +37,4 @@ public class LoginActivity extends AppCompatActivity {
     }
 }
 //comment
+//Commented by Milinda
