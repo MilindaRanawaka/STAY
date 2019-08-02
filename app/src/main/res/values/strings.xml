@@ -35,4 +35,11 @@
     <string name="phoneNumHint">Enter Phone Number</string>
     <string name="enrAdd">Enter Address</string>
     <string name="entrDOB">Enter Date of Birth</string>
+    <string name="delete">Delete</string>
+    <string name="Bid">Boarder ID</string>
+    <string name="update">Update</string>
+    <string name="dele">Delete</string>
+    <string name="name">Name</string>
+    <string name="name1">Alice</string>
+    <string name="bID">B001</string>
 </resources>
