@@ -13,4 +13,26 @@
     <string name="Bfood">Food</string>
     <string name="Bpay">Payment</string>
     <string name="Bleave">Leave</string>
+    <string name="title_activity_mng_border">MngBorderActivity</string>
+    <string name="tab_text_2">View Boarders</string>
+    <string name="tab_text_1">Add Boarder</string>
+    <string name="bdrName">Boarder Name</string>
+    <string name="enrName">Enter Your Name</string>
+    <string name="bday">Date Of Birth</string>
+    <string name="nic">Nic No</string>
+    <string name="phno">Phone No</string>
+    <string name="eMail" />
+    <string name="email">E-Mail Address</string>
+    <string name="adrs">Address</string>
+    <string name="gender">Gender</string>
+    <string name="room">Room Number</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="add">Add Member</string>
+    <string name="roomNo">Enter Room Number</string>
+    <string name="nicNO">Enter NIC No</string>
+    <string name="emiladd">Enter E-Mail Address</string>
+    <string name="phoneNumHint">Enter Phone Number</string>
+    <string name="enrAdd">Enter Address</string>
+    <string name="entrDOB">Enter Date of Birth</string>
 </resources>
