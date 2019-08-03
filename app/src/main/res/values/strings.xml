@@ -279,6 +279,7 @@
     <string name="LateLeaveDate">Late Arival Date</string>
     <string name="arivalTIme">Arival Time</string>
     <string name="reasonTxt">Enter Reason</string>
+    <string name="leaveReq">Leave Request</string>
 
 
 </resources>

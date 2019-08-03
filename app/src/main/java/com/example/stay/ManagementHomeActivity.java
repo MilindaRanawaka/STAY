@@ -35,4 +35,9 @@ public class ManagementHomeActivity extends AppCompatActivity {
         Intent intentfood = new Intent(this,MngFoodRequest.class);
         startActivity(intentfood);
     }
+
+    public void onManageLeave(View view) {
+        Intent intent = new Intent(this,MngLeaveReqActivity.class);
+        startActivity(intent);
+    }
 }

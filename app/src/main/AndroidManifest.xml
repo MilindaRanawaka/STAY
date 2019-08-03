@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BoarderViewLeaveActivity"></activity>
+        <activity android:name=".MngLeaveReqActivity"></activity>
+        <activity android:name=".BoarderViewLeaveActivity" />
         <activity android:name=".BoarderLeaveRequest" />
         <activity android:name=".BoarderViewFoodActivity" />
         <activity android:name=".UpdateSuccess" />
