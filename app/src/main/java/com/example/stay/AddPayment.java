@@ -19,5 +19,3 @@ public class AddPayment extends AppCompatActivity {
         startActivity(intent2);
     }
 }
-//mm
-//dulashni-9.11pm
