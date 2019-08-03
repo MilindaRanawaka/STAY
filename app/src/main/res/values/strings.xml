@@ -77,4 +77,42 @@
     <string name="etrprice">Enter Price</string>
     <string name="addroom">Add Room</string>
 
+    <string name="msg1">Your this month room rent is here</string>
+    <string name="btn1">Add Payment</string>
+    <string name="msg2">Payments</string>
+    <string name="mgs3">Your this month room rent payment is here</string>
+    <string name="msg4">This Month Rent</string>
+    <string name="msg5">View Past Payments</string>
+    <string name="btn4">Back</string>
+    <string name="msg6">Add Payment</string>
+    <string name="input1">Boarder ID</string>
+    <string name="input2">Boarder Name</string>
+    <string name="input3">NIC</string>
+    <string name="input4">Phone</string>
+    <string name="input51">Type A</string>
+    <string name="input52">Type B</string>
+    <string name="input5">Room Type</string>
+    <string name="input6">Total Amount</string>
+    <string name="input7">Bank</string>
+    <string name="btn5">Upload Slip</string>
+    <string name="btn6">Submit</string>
+    <string name="msg7">Your Submission was successful</string>
+    <string name="input8">Date Paid</string>
+    <string name="btn8">Update Details</string>
+    <string name="msg8">Update Payment</string>
+    <string name="btn81">Update</string>
+    <string name="msg9">Past Payments</string>
+    <string name="msg101">January</string>
+    <string name="msg102">12000/=</string>
+    <string name="msg103">2019.01.02</string>
+    <string name="msg201">February</string>
+    <string name="msg202">12000/=</string>
+    <string name="msg203">2019.02.03</string>
+    <string name="msg301">March</string>
+    <string name="msg302">12000/=</string>
+    <string name="msg303">2019.03.03</string>
+    <string name="msg11">Updated Successfully</string>
+    <string name="btn9">Back To Payments</string>
+
+
 </resources>

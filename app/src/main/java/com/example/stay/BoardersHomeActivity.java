@@ -23,4 +23,9 @@ public class BoardersHomeActivity extends AppCompatActivity {
         Intent foodIntent = new Intent(this,BoarderFoodActivity.class);
         startActivity(foodIntent);
     }
+
+    public void onPaymentClick(View view){
+        Intent payIntent = new Intent(this,BoarderPaymentHomeActivity.class);
+        startActivity(payIntent);
+    }
 }

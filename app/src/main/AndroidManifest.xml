@@ -9,10 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".UpdateSuccess"></activity>
+        <activity android:name=".PaymentUpdate" />
+        <activity android:name=".CompletePayment" />
+        <activity android:name=".ViewPayment" />
+        <activity android:name=".AddPayment" />
+        <activity android:name=".BoarderPaymentHomeActivity" />
         <activity
             android:name=".MngRoomActivity"
             android:label="@string/title_activity_mng_room"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".BoarderFoodActivity" />
         <activity android:name=".BoarderRequestFoodActivity" />
         <activity android:name=".BoarderManageActivity" />
