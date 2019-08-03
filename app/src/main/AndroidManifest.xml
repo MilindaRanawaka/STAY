@@ -14,6 +14,8 @@
         <activity android:name=".CompletePayment" />
         <activity android:name=".ViewPayment" />
         <activity android:name=".AddPayment" />
+        <activity android:name=".BoarderViewFoodActivity"/>
+        <activity android:name=".BoarderLeaveHomeActivity"/>
         <activity android:name=".BoarderPaymentHomeActivity" />
         <activity
             android:name=".MngRoomActivity"

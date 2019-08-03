@@ -1,6 +1,7 @@
 package com.example.stay.ui.main;
 
 import android.content.Context;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
