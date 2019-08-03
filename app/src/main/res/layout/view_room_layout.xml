@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/Bid"
+                android:text="@string/Rid"
                 android:textStyle="bold" />
 
             <TextView
@@ -36,8 +36,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/name"
-                android:textStyle="bold" />
+                android:text="@string/Capacity"
+                android:textStyle="bold"
+                tools:text="@string/Capacity" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -67,7 +68,7 @@
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:gravity="center"
-                android:text="@string/bID" />
+                android:text="@string/rID1" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -77,51 +78,7 @@
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:gravity="center"
-                android:text="@string/name1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:background="#ffffff"
-                android:gravity="center"
-                android:text="@string/update" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:background="#ffffff"
-                android:gravity="center"
-                android:text="@string/dele" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:background="#ffffff"
-                android:gravity="center"
-                android:text="@string/bID2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:background="#ffffff"
-                android:gravity="center"
-                android:text="@string/name2" />
+                android:text="@string/one" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -155,7 +112,7 @@
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:gravity="center"
-                android:text="@string/bID3" />
+                android:text="@string/rID2" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -165,7 +122,51 @@
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:gravity="center"
-                android:text="@string/name3" />
+                android:text="@string/two" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:text="@string/update" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:text="@string/dele" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:text="@string/rID3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:text="@string/one" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -202,4 +203,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

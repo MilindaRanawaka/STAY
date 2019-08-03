@@ -19,4 +19,8 @@ public class ManagementHomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onRoom(View view){
+        Intent intent = new Intent(this,MngRoomActivity.class);
+        startActivity(intent);
+    }
 }

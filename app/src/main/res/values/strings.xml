@@ -16,6 +16,10 @@
     <string name="title_activity_mng_border">MngBorderActivity</string>
     <string name="tab_text_2">View Boarders</string>
     <string name="tab_text_1">Add Boarder</string>
+
+    <string name="tab_text_3">View Rooms</string>
+    <string name="tab_text_4">Add Room</string>
+
     <string name="bdrName">Boarder Name</string>
     <string name="enrName">Enter Your Name</string>
     <string name="bday">Date Of Birth</string>
@@ -53,5 +57,24 @@
     <string name="listFood">Food List</string>
     <string name="tvFood">Food List</string>
     <string name="btnOrder">Order</string>
+    <string name="title_activity_mng_room">MngRoomActivity</string>
+    <string name="Rid">Room ID</string>
+    <string name="Capacity">Capacity</string>
+    <string name="rID1">R001</string>
+    <string name="rID2">R002</string>
+    <string name="rID3">R003</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="bID2">B002</string>
+    <string name="bID3">B003</string>
+    <string name="name2">John</string>
+    <string name="name3">Josh</string>
+    <string name="rNO">Room No</string>
+    <string name="etrroomNum">Enter Room Number</string>
+    <string name="cpcty">Capacity</string>
+    <string name="price">Price</string>
+    <string name="enrtCapa">Enter Room Capacity</string>
+    <string name="etrprice">Enter Price</string>
+    <string name="addroom">Add Room</string>
 
 </resources>

@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BoarderFoodActivity"></activity>
+        <activity
+            android:name=".MngRoomActivity"
+            android:label="@string/title_activity_mng_room"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".BoarderFoodActivity" />
         <activity android:name=".BoarderRequestFoodActivity" />
         <activity android:name=".BoarderManageActivity" />
         <activity
