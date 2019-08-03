@@ -28,4 +28,9 @@ public class BoardersHomeActivity extends AppCompatActivity {
         Intent payIntent = new Intent(this,BoarderPaymentHomeActivity.class);
         startActivity(payIntent);
     }
+
+    public void OnClickLeave(View view) {
+        Intent LeaveClick = new Intent(this,BoarderLeaveHomeActivity.class);
+        startActivity(LeaveClick);
+    }
 }
