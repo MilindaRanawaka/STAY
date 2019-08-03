@@ -30,8 +30,4 @@ public class ManagementHomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this,RecievedPayments.class);
         startActivity(intent);
     }
-    public void onAddRoom(View view){
-        Intent addIntent = new Intent(this, Frag4.class);
-        startActivity(addIntent);
-    }
 }
