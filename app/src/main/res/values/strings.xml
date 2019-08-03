@@ -258,6 +258,15 @@
     <string name="tvfr">Fride Rice</string>
     <string name="btnPast">Past Orders</string>
     <string name="tvss">Special Soup</string>
+    <string name="tvFoodOrders">Food Orders</string>
+    <string name="ml1">Milinda Ranawaka</string>
+    <string name="ml2">Room No : 08</string>
+    <string name="ml3">Kavishka Ransara</string>
+    <string name="ml4">Room No : 10</string>
+    <string name="ml5">Dulashni Amanda</string>
+    <string name="ml6">Room No : 20</string>
+    <string name="ml7">Ashani Malsha</string>
+    <string name="ml8">Room No : 22</string>
 
 
 </resources>

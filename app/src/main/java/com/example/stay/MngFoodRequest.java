@@ -12,5 +12,3 @@ public class MngFoodRequest extends AppCompatActivity {
         setContentView(R.layout.activity_mng_food_request);
     }
 }
-//haiyooo
-//mata ba

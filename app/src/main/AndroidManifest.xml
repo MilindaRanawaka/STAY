@@ -11,9 +11,12 @@
         android:theme="@style/AppTheme">
         <activity android:name=".BoarderViewFoodActivity"></activity>
         <activity android:name=".UpdateSuccess" />
+        <activity android:name=".MngFoodRequest"/>
         <activity android:name=".PaymentUpdate" />
+        <activity android:name=".RecievedPayments"/>
         <activity android:name=".CompletePayment" />
         <activity android:name=".ViewPayment" />
+        <activity android:name=".BoarderLeaveHomeActivity"/>
         <activity android:name=".AddPayment" />
         <activity android:name=".BoarderPaymentHomeActivity" />
         <activity
