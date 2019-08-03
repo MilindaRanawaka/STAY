@@ -23,5 +23,4 @@ public class ManagementHomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this,MngRoomActivity.class);
         startActivity(intent);
     }
-    //556
 }
