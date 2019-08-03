@@ -45,7 +45,7 @@
 
     <string name="phno">Phone No</string>
 
-    <string name="eMail"/>
+    <string name="eMail" />
 
     <string name="email">E-Mail Address</string>
 
@@ -267,6 +267,18 @@
     <string name="ml6">Room No : 20</string>
     <string name="ml7">Ashani Malsha</string>
     <string name="ml8">Room No : 22</string>
+
+    <string name="brdName">Boarder Name</string>
+    <string name="room_no">Room No</string>
+    <string name="reason">Reason For Leave</string>
+    <string name="date">Leave Date</string>
+    <string name="time">Leave Time</string>
+    <string name="sub_botton">Submit</string>
+    <string name="elyLeave">Early Leave</string>
+    <string name="lateCome">Late Arrival</string>
+    <string name="LateLeaveDate">Late Arival Date</string>
+    <string name="arivalTIme">Arival Time</string>
+    <string name="reasonTxt">Enter Reason</string>
 
 
 </resources>
