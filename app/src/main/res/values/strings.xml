@@ -1,118 +1,263 @@
 <resources>
     <string name="app_name">STAY</string>
+
     <string name="uName">User Name</string>
+
     <string name="pwd">Password</string>
+
     <string name="log">Log In</string>
+
     <string name="Mfood">Manage Food</string>
+
     <string name="Mpay">Manage Payment</string>
+
     <string name="Mleave">Manage Leave</string>
+
     <string name="Mstu">Manage Boarders</string>
+
     <string name="Mroom">Manage Rooms</string>
 
     <string name="Bprofile">My Profile</string>
+
     <string name="Bfood">Food</string>
+
     <string name="Bpay">Payment</string>
+
     <string name="Bleave">Leave</string>
+
     <string name="title_activity_mng_border">MngBorderActivity</string>
+
     <string name="tab_text_2">View Boarders</string>
+
     <string name="tab_text_1">Add Boarder</string>
 
     <string name="tab_text_3">View Rooms</string>
+
     <string name="tab_text_4">Add Room</string>
 
     <string name="bdrName">Boarder Name</string>
+
     <string name="enrName">Enter Your Name</string>
+
     <string name="bday">Date Of Birth</string>
+
     <string name="nic">Nic No</string>
+
     <string name="phno">Phone No</string>
-    <string name="eMail" />
+
+    <string name="eMail"/>
+
     <string name="email">E-Mail Address</string>
+
     <string name="adrs">Address</string>
+
     <string name="gender">Gender</string>
+
     <string name="room">Room Number</string>
+
     <string name="male">Male</string>
+
     <string name="female">Female</string>
+
     <string name="add">Add Member</string>
+
     <string name="roomNo">Enter Room Number</string>
+
     <string name="nicNO">Enter NIC No</string>
+
     <string name="emiladd">Enter E-Mail Address</string>
+
     <string name="phoneNumHint">Enter Phone Number</string>
+
     <string name="enrAdd">Enter Address</string>
+
     <string name="entrDOB">Enter Date of Birth</string>
+
     <string name="delete">Delete</string>
+
     <string name="Bid">Boarder ID</string>
+
     <string name="update">Update</string>
+
     <string name="dele">Delete</string>
+
     <string name="name">Name</string>
+
     <string name="name1">Alice</string>
+
     <string name="bID">B001</string>
+
     <string name="updateDetail">Update Details</string>
 
     <string name="btnAdd">Add Order</string>
+
     <string name="btnView">View Order</string>
+
     <string name="btnDelete">Delete Order</string>
+
     <string name="btnUpdate">Update Order</string>
+
     <string name="tvname">Name</string>
+
     <string name="tvRno">Room Number</string>
+
     <string name="listFood">Food List</string>
+
     <string name="tvFood">Food List</string>
+
     <string name="btnOrder">Order</string>
+
     <string name="title_activity_mng_room">MngRoomActivity</string>
+
     <string name="Rid">Room ID</string>
+
     <string name="Capacity">Capacity</string>
+
     <string name="rID1">R001</string>
+
     <string name="rID2">R002</string>
+
     <string name="rID3">R003</string>
+
     <string name="one">1</string>
+
     <string name="two">2</string>
+
     <string name="bID2">B002</string>
+
     <string name="bID3">B003</string>
+
     <string name="name2">John</string>
+
     <string name="name3">Josh</string>
+
     <string name="rNO">Room No</string>
+
     <string name="etrroomNum">Enter Room Number</string>
+
     <string name="cpcty">Capacity</string>
+
     <string name="price">Price</string>
+
     <string name="enrtCapa">Enter Room Capacity</string>
+
     <string name="etrprice">Enter Price</string>
+
     <string name="addroom">Add Room</string>
 
     <string name="msg1">Your this month room rent is here</string>
+
     <string name="btn1">Add Payment</string>
+
     <string name="msg2">Payments</string>
+
     <string name="mgs3">Your this month room rent payment is here</string>
+
     <string name="msg4">This Month Rent</string>
+
     <string name="msg5">View Past Payments</string>
+
     <string name="btn4">Back</string>
+
     <string name="msg6">Add Payment</string>
+
     <string name="input1">Boarder ID</string>
+
     <string name="input2">Boarder Name</string>
+
     <string name="input3">NIC</string>
+
     <string name="input4">Phone</string>
+
     <string name="input51">Type A</string>
+
     <string name="input52">Type B</string>
+
     <string name="input5">Room Type</string>
+
     <string name="input6">Total Amount</string>
+
     <string name="input7">Bank</string>
+
     <string name="btn5">Upload Slip</string>
+
     <string name="btn6">Submit</string>
+
     <string name="msg7">Your Submission was successful</string>
+
     <string name="input8">Date Paid</string>
+
     <string name="btn8">Update Details</string>
+
     <string name="msg8">Update Payment</string>
+
     <string name="btn81">Update</string>
+
     <string name="msg9">Past Payments</string>
+
     <string name="msg101">January</string>
+
     <string name="msg102">12000/=</string>
+
     <string name="msg103">2019.01.02</string>
+
     <string name="msg201">February</string>
+
     <string name="msg202">12000/=</string>
+
     <string name="msg203">2019.02.03</string>
+
     <string name="msg301">March</string>
+
     <string name="msg302">12000/=</string>
+
     <string name="msg303">2019.03.03</string>
+
     <string name="msg11">Updated Successfully</string>
+
     <string name="btn9">Back To Payments</string>
+
+    <string name="msg12">Recieved Payments</string>
+
+    <string name="msg13">Boarder ID: B1234</string>
+
+    <string name="msg14">Payment ID: P1234</string>
+
+    <string name="msg15">Amount : 12000/=</string>
+
+    <string name="msg16">Date : 2019.08.06</string>
+
+    <string name="msg17">Boarder ID: B6789</string>
+
+    <string name="msg18">Payment ID: P6789</string>
+
+    <string name="msg19">Amount : 10000/=</string>
+
+    <string name="msg20">Date : 2019.08.07</string>
+
+    <string name="msg21">Boarder ID: B7890</string>
+
+    <string name="msg22">Payment ID: P7890</string>
+
+    <string name="msg23">Amount : 15000/=</string>
+
+    <string name="msg24">Date : 2019.08.08</string>
+
+    <string name="btn10">Clear</string>
+
+    <string name="req">Early Leave Request</string>
+
+    <string name="view_req">View Request</string>
+
+    <string name="stay">Stay App</string>
+
+    <string name="tvFoodOrder">Foods</string>
+    <string name="tvtoday">Today Orders</string>
+    <string name="tvDueOrder">Due Orders</string>
+    <string name="tvsh">String Hoppers</string>
+    <string name="tvfr">Fride Rice</string>
+    <string name="btnPast">Past Orders</string>
+    <string name="tvss">Special Soup</string>
 
 
 </resources>
