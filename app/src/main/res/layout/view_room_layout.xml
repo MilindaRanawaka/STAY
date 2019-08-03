@@ -192,7 +192,7 @@
     </TableLayout>
 
     <SearchView
-        android:id="@+id/mngSrch"
+        android:id="@+id/FoodSrch"
         android:layout_width="388dp"
         android:layout_height="82dp"
         android:layout_marginStart="13dp"

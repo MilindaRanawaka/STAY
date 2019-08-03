@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UpdateSuccess"></activity>
+        <activity android:name=".BoarderViewFoodActivity"></activity>
+        <activity android:name=".UpdateSuccess" />
         <activity android:name=".PaymentUpdate" />
         <activity android:name=".CompletePayment" />
         <activity android:name=".ViewPayment" />

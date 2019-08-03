@@ -18,4 +18,9 @@ public class BoarderFoodActivity extends AppCompatActivity {
         Intent intent = new Intent(this,BoarderRequestFoodActivity.class);
         startActivity(intent);
     }
+
+    public void onFoodViewOrder(View view) {
+        Intent viewFood = new Intent(this,BoarderViewFoodActivity.class);
+        startActivity(viewFood);
+    }
 }
