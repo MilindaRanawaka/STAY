@@ -27,6 +27,7 @@
             android:label="@string/title_activity_mng_border"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".BoardersHomeActivity" />
+        <activity android:name=".RecievedPayments"/>
         <activity android:name=".ManagementHomeActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
