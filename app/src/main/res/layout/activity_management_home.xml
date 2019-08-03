@@ -73,6 +73,7 @@
         android:layout_marginBottom="31dp"
         android:background="@color/colorAccent"
         android:text="@string/Mfood"
+        android:onClick="onFoodViewOrder"
         app:layout_constraintBottom_toTopOf="@+id/BleaveBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
