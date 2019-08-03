@@ -23,4 +23,10 @@ public class ManagementHomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this,MngRoomActivity.class);
         startActivity(intent);
     }
+
+    public void onPayment(View view){
+        Intent intent = new Intent(this,RecievedPayments.class);
+        startActivity(intent);
+    }
+
 }

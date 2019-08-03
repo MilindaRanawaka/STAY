@@ -113,6 +113,20 @@
     <string name="msg303">2019.03.03</string>
     <string name="msg11">Updated Successfully</string>
     <string name="btn9">Back To Payments</string>
+    <string name="msg12">Recieved Payments</string>
+    <string name="msg13">Boarder ID:     B1234</string>
+    <string name="msg14">Payment ID:     P1234</string>
+    <string name="msg15">Amount  :       12000/=</string>
+    <string name="msg16">Date    :       2019.08.06</string>
+    <string name="msg17">Boarder ID:     B6789</string>
+    <string name="msg18">Payment ID:     P6789</string>
+    <string name="msg19">Amount  :       10000/=</string>
+    <string name="msg20">Date    :       2019.08.07</string>
+    <string name="msg21">Boarder ID:     B7890</string>
+    <string name="msg22">Payment ID:     P7890</string>
+    <string name="msg23">Amount  :       15000/=</string>
+    <string name="msg24">Date    :       2019.08.08</string>
+    <string name="btn10">Clear</string>
 
     <string name="req">Early Leave Request</string>
     <string name="view_req">View Request</string>
