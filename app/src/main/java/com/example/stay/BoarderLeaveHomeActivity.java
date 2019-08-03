@@ -18,4 +18,9 @@ public class BoarderLeaveHomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this,BoarderLeaveRequest.class);
         startActivity(intent);
     }
+
+    public void LeaveReqView(View view) {
+        Intent intent = new Intent(this,BoarderViewLeaveActivity.class);
+        startActivity(intent);
+    }
 }
