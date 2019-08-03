@@ -114,5 +114,9 @@
     <string name="msg11">Updated Successfully</string>
     <string name="btn9">Back To Payments</string>
 
+    <string name="req">Early Leave Request</string>
+    <string name="view_req">View Request</string>
+    <string name="stay">Stay App</string>
+
 
 </resources>
