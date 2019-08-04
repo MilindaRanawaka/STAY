@@ -83,7 +83,7 @@
 
     <string name="name">Name</string>
 
-    <string name="name1">Alice</string>
+    <string name="name1">Milinda Ranawaka</string>
 
     <string name="bID">B001</string>
 
@@ -280,6 +280,8 @@
     <string name="arivalTIme">Arival Time</string>
     <string name="reasonTxt">Enter Reason</string>
     <string name="leaveReq">Leave Request</string>
+    <string name="idNo1">981065874V</string>
+    <string name="phNo1">0776605489</string>
 
 
 </resources>
