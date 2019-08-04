@@ -109,8 +109,8 @@
 
     <ImageView
         android:id="@+id/imageView42"
-        android:layout_width="360dp"
-        android:layout_height="214dp"
+        android:layout_width="330dp"
+        android:layout_height="154dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -119,10 +119,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.015"
+        app:layout_constraintVertical_bias="0.048"
         app:srcCompat="@drawable/stay" />
 
     <ImageView
