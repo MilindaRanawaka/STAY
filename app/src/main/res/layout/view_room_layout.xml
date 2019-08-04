@@ -106,16 +106,6 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/ac" />
 
-                <TextView
-                    android:id="@+id/textView242"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="150dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="70dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/male" />
-
                 <Button
                     android:id="@+id/button211"
                     android:layout_width="wrap_content"
@@ -124,6 +114,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:onClick="onUpdateRoom"
                     android:text="@string/btn81" />
 
                 <Button
@@ -200,16 +191,6 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/non_ac" />
 
-                <TextView
-                    android:id="@+id/textView142"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="150dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="70dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/male" />
-
                 <Button
                     android:id="@+id/button111"
                     android:layout_width="wrap_content"
@@ -218,6 +199,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:onClick="onUpdateRoom"
                     android:text="@string/btn81" />
 
                 <Button
@@ -294,16 +276,6 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/ac" />
 
-                <TextView
-                    android:id="@+id/textView42"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="150dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="70dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/male" />
-
                 <Button
                     android:id="@+id/button11"
                     android:layout_width="wrap_content"
@@ -312,6 +284,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:onClick="onUpdateRoom"
                     android:text="@string/btn81" />
 
                 <Button
@@ -388,16 +361,6 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/ac" />
 
-                <TextView
-                    android:id="@+id/textView342"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="150dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="70dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/male" />
-
                 <Button
                     android:id="@+id/button311"
                     android:layout_width="wrap_content"
@@ -406,6 +369,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:onClick="onUpdateRoom"
                     android:text="@string/btn81" />
 
                 <Button
@@ -483,16 +447,6 @@
                     android:layout_marginBottom="10dp"
                     android:text="@string/ac" />
 
-                <TextView
-                    android:id="@+id/textView442"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="150dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="70dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="@string/male" />
-
                 <Button
                     android:id="@+id/button411"
                     android:layout_width="wrap_content"
@@ -501,6 +455,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:onClick="onUpdateRoom"
                     android:text="@string/btn81" />
 
                 <Button

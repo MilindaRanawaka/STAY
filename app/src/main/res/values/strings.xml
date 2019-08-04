@@ -290,6 +290,7 @@
     <string name="ac">AC</string>
     <string name="non_ac">Non-AC</string>
     <string name="upMem">Update Members</string>
+    <string name="updaRoom">Update Room</string>
 
 
 </resources>

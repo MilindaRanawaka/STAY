@@ -1,6 +1,8 @@
 package com.example.stay;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.stay.ui.main.SectionsPagerAdapter2;
 import com.google.android.material.tabs.TabLayout;
@@ -20,6 +22,11 @@ public class MngRoomActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
+    }
+
+    public void onUpdateRoom(View view){
+        Intent intentupRoom = new Intent(this,UpdateRoomActivity.class);
+        startActivity(intentupRoom);
     }
 
 }
