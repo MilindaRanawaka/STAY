@@ -35,6 +35,7 @@
         android:onClick="openAddPayment"
         android:layout_marginRight="110dp"
         android:text="@string/msg4"
+        android:background="#9575CD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
@@ -50,6 +51,7 @@
         android:layout_marginRight="116dp"
         android:layout_marginBottom="56dp"
         android:text="@string/msg5"
+        android:background="#9575CD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

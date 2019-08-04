@@ -66,6 +66,7 @@
         android:onClick="onUpdateDetails"
         android:layout_marginBottom="72dp"
         android:text="@string/btn8"
+        android:background="#9575CD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
