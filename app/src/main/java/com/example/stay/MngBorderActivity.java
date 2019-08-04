@@ -1,5 +1,6 @@
 package com.example.stay;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -26,5 +27,10 @@ public class MngBorderActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
+    }
+
+    public void onUpdateBoarder(View view){
+        Intent intentUpdate = new Intent(this,EditBoardersActivity.class);
+        startActivity(intentUpdate);
     }
 }

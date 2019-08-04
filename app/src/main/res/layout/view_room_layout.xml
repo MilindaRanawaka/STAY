@@ -134,8 +134,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/dele"
-                    android:background="#9575CD"/>
+                    android:text="@string/dele" />
 
             </androidx.cardview.widget.CardView>
 
@@ -219,8 +218,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/btn81"
-                    android:background="#9575CD"/>
+                    android:text="@string/btn81" />
 
                 <Button
                     android:id="@+id/button112"
@@ -230,8 +228,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/dele"
-                    android:background="#9575CD"/>
+                    android:text="@string/dele" />
 
             </androidx.cardview.widget.CardView>
 
@@ -315,8 +312,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/btn81"
-                    android:background="#9575CD"/>
+                    android:text="@string/btn81" />
 
                 <Button
                     android:id="@+id/button12"
@@ -326,8 +322,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/dele"
-                    android:background="#9575CD"/>
+                    android:text="@string/dele" />
 
             </androidx.cardview.widget.CardView>
 
@@ -421,8 +416,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/dele"
-                    android:background="#9575CD"/>
+                    android:text="@string/dele" />
 
             </androidx.cardview.widget.CardView>
 
@@ -507,8 +501,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/btn81"
-                    android:background="#9575CD"/>
+                    android:text="@string/btn81" />
 
                 <Button
                     android:id="@+id/button412"
@@ -518,8 +511,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/dele"
-                    android:background="#9575CD"/>
+                    android:text="@string/dele" />
 
             </androidx.cardview.widget.CardView>
 

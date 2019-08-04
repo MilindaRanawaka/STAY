@@ -289,6 +289,7 @@
     <string name="ac_nonAc">AC / Non-AC</string>
     <string name="ac">AC</string>
     <string name="non_ac">Non-AC</string>
+    <string name="upMem">Update Members</string>
 
 
 </resources>
