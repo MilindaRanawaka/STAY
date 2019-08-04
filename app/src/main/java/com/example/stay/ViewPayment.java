@@ -12,5 +12,4 @@ public class ViewPayment extends AppCompatActivity {
         setContentView(R.layout.activity_view_payment);
     }
 }
-//malsha
-//ashani
+
