@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/Rid"
+                android:text="Boarder ID"
                 android:textStyle="bold" />
 
             <TextView
@@ -36,9 +36,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/Capacity"
+                android:text="Leave Time"
                 android:textStyle="bold"
-                tools:text="@string/Capacity" />
+                tools:text="Leave Time" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:gravity="center"
-                android:text="@string/rID1" />
+                android:text="B102" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -78,51 +78,7 @@
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:gravity="center"
-                android:text="@string/one" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:background="#ffffff"
-                android:gravity="center"
-                android:text="@string/update" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:background="#ffffff"
-                android:gravity="center"
-                android:text="@string/dele" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:background="#ffffff"
-                android:gravity="center"
-                android:text="@string/rID2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="1"
-                android:background="#ffffff"
-                android:gravity="center"
-                android:text="@string/two" />
+                android:text="10.30p.m" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -156,7 +112,7 @@
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:gravity="center"
-                android:text="@string/rID3" />
+                android:text="B360" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -166,7 +122,51 @@
                 android:layout_weight="1"
                 android:background="#ffffff"
                 android:gravity="center"
-                android:text="@string/one" />
+                android:text="7.30p.m" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:text="@string/update" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:text="@string/dele" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:text="B460" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:text="11.00p.m" />
 
             <TextView
                 android:layout_width="wrap_content"

@@ -285,6 +285,7 @@
     <string name="rID4">R004</string>
     <string name="rs20000">20000/=</string>
     <string name="rs25000">25000/=</string>
+    <string name="early_leave_request">Early Leave Request</string>
 
 
 </resources>
