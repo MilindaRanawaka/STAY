@@ -282,6 +282,9 @@
     <string name="leaveReq">Leave Request</string>
     <string name="idNo1">981065874V</string>
     <string name="phNo1">0776605489</string>
+    <string name="rID4">R004</string>
+    <string name="rs20000">20000/=</string>
+    <string name="rs25000">25000/=</string>
 
 
 </resources>
