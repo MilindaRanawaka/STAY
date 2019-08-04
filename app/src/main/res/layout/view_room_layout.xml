@@ -104,7 +104,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/bID" />
+                    android:text="@string/ac" />
 
                 <TextView
                     android:id="@+id/textView242"
@@ -198,7 +198,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/bID" />
+                    android:text="@string/non_ac" />
 
                 <TextView
                     android:id="@+id/textView142"
@@ -292,7 +292,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/bID" />
+                    android:text="@string/ac" />
 
                 <TextView
                     android:id="@+id/textView42"
@@ -386,7 +386,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/bID" />
+                    android:text="@string/ac" />
 
                 <TextView
                     android:id="@+id/textView342"
@@ -481,7 +481,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="10dp"
-                    android:text="@string/bID" />
+                    android:text="@string/ac" />
 
                 <TextView
                     android:id="@+id/textView442"
