@@ -109,22 +109,24 @@
                 <Button
                     android:id="@+id/button211"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="270dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#9575CD"
                     android:onClick="onUpdateRoom"
                     android:text="@string/btn81" />
 
                 <Button
                     android:id="@+id/button212"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="270dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#9575CD"
                     android:text="@string/dele" />
 
             </androidx.cardview.widget.CardView>
@@ -194,22 +196,24 @@
                 <Button
                     android:id="@+id/button111"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="270dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#9575CD"
                     android:onClick="onUpdateRoom"
                     android:text="@string/btn81" />
 
                 <Button
                     android:id="@+id/button112"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="270dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#9575CD"
                     android:text="@string/dele" />
 
             </androidx.cardview.widget.CardView>
@@ -279,22 +283,24 @@
                 <Button
                     android:id="@+id/button11"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="270dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#9575CD"
                     android:onClick="onUpdateRoom"
                     android:text="@string/btn81" />
 
                 <Button
                     android:id="@+id/button12"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="270dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#9575CD"
                     android:text="@string/dele" />
 
             </androidx.cardview.widget.CardView>
@@ -364,22 +370,24 @@
                 <Button
                     android:id="@+id/button311"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="270dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#9575CD"
                     android:onClick="onUpdateRoom"
                     android:text="@string/btn81" />
 
                 <Button
                     android:id="@+id/button312"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="270dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#9575CD"
                     android:text="@string/dele" />
 
             </androidx.cardview.widget.CardView>
@@ -450,22 +458,24 @@
                 <Button
                     android:id="@+id/button411"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="270dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#9575CD"
                     android:onClick="onUpdateRoom"
                     android:text="@string/btn81" />
 
                 <Button
                     android:id="@+id/button412"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="280dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="270dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#9575CD"
                     android:text="@string/dele" />
 
             </androidx.cardview.widget.CardView>
