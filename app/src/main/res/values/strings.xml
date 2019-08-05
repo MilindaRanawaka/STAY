@@ -299,6 +299,8 @@
     <string name="b220">B220</string>
     <string name="trip_second">Annual Trip</string>
     <string name="updaRoom">Update Room</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_room_id">Enter Room ID</string>
 
 
 </resources>

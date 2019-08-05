@@ -199,7 +199,7 @@
         android:layout_marginRight="7dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Enter Name"
+        android:hint="@string/enter_name"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -212,7 +212,7 @@
         android:layout_marginRight="7dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Enter Room ID"
+        android:hint="@string/enter_room_id"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent" />
