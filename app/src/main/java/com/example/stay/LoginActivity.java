@@ -26,7 +26,8 @@ public class LoginActivity extends AppCompatActivity {
         str1 = tv1.getText().toString();
         num1 = Integer.parseInt(str1);
 
-
+        //edit user login staff
+        //add db con
         if(num1 == 1){
             Intent intent = new Intent(this,ManagementHomeActivity.class);
             startActivity(intent);
@@ -34,5 +35,6 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent2 = new Intent(this, BoardersHomeActivity.class);
             startActivity(intent2);
         }
+
     }
 }
