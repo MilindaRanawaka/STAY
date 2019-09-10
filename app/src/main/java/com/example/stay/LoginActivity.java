@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         if(num1 == 1){
             Intent intent = new Intent(this,ManagementHomeActivity.class);
             startActivity(intent);
-            //try
+            //try2
         } else if(num1 == 2){
             Intent intent2 = new Intent(this, BoardersHomeActivity.class);
             startActivity(intent2);

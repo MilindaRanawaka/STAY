@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "330834392412",
+    "firebase_url": "https://stay-ee88a.firebaseio.com",
+    "project_id": "stay-ee88a",
+    "storage_bucket": "stay-ee88a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330834392412:android:bbe7842a8e73eac4b3fd99",
+        "android_client_info": {
+          "package_name": "com.example.stay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330834392412-np0hcptmr6i57gdv5c798dsr3q57jmn0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stay",
+            "certificate_hash": "0cd171a521cf2c840439c065f271f82060c4ccdc"
+          }
+        },
+        {
+          "client_id": "330834392412-38p4dpbqo4nobr3u7s0fpppaf3a69ga4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-HIHN6z84luk86AOsSOBs_y3u2YvEnUA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330834392412-38p4dpbqo4nobr3u7s0fpppaf3a69ga4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
