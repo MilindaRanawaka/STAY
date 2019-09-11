@@ -10,7 +10,7 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addBtn"
         android:layout_width="131dp"
         android:layout_height="57dp"
         android:layout_marginStart="8dp"

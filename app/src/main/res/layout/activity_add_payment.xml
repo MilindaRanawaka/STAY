@@ -36,7 +36,7 @@
         app:srcCompat="@drawable/makepayment" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/roomNoTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -62,13 +62,13 @@
         android:layout_marginRight="32dp"
         android:layout_marginBottom="541dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintEnd_toStartOf="@+id/roomNoTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/peol" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/capacityTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
@@ -83,7 +83,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/roomNoTxt"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -102,7 +102,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/capacityTxt" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -259,12 +259,12 @@
         android:inputType="textPersonName"
         android:text="@string/input7"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/addBtn"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addBtn"
         android:layout_width="140dp"
         android:layout_height="38dp"
         android:layout_marginStart="22dp"
