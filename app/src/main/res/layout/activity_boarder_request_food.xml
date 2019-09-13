@@ -9,7 +9,7 @@
     tools:context=".BoarderRequestFoodActivity">
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/leaveDateTxt"
         android:layout_width="138dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="0.026" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/borderName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.025" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/roomNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -63,7 +63,7 @@
         app:layout_constraintVertical_bias="0.095" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/reasonTxt"
         android:layout_width="138dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
@@ -100,7 +100,7 @@
         app:layout_constraintVertical_bias="0.8" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/reason"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -113,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.008"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText4"
+        app:layout_constraintTop_toTopOf="@+id/leaveDateTxt"
         app:layout_constraintVertical_bias="0.156" />
 
     <Button
@@ -131,7 +131,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.905"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText4"
+        app:layout_constraintTop_toTopOf="@+id/leaveDateTxt"
         app:layout_constraintVertical_bias="0.972" />
 
     <ImageView
@@ -183,7 +183,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/borderName"
         app:layout_constraintVertical_bias="0.398"
         app:srcCompat="@drawable/hoppers" />
 
@@ -219,7 +219,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/borderName"
         app:layout_constraintVertical_bias="0.561"
         app:srcCompat="@drawable/milkrice" />
 
@@ -236,7 +236,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/borderName"
         app:layout_constraintVertical_bias="0.644"
         app:srcCompat="@drawable/fried" />
 
@@ -289,7 +289,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText4"
+        app:layout_constraintTop_toTopOf="@+id/leaveDateTxt"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/peol" />
 
