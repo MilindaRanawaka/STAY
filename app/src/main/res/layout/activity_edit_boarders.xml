@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/roomNoTxt"
+        android:id="@+id/nameTxtEditB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/enterDOBEditB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -119,10 +119,10 @@
         android:hint="@string/entrDOB"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roomNoTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/nameTxtEditB" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/addressTxtEditB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -133,10 +133,10 @@
         android:hint="@string/enrAdd"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/enterDOBEditB" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/nicTxtEditB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -146,10 +146,10 @@
         android:hint="@string/nicNO"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintTop_toBottomOf="@+id/addressTxtEditB" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/phNoTxtEditB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
@@ -159,10 +159,10 @@
         android:hint="@string/phoneNumHint"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupEditB" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/emailTxtEditB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -172,10 +172,10 @@
         android:hint="@string/emiladd"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+        app:layout_constraintTop_toBottomOf="@+id/phNoTxtEditB" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/roomNoTxtEditB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
@@ -185,10 +185,10 @@
         android:hint="@string/roomNo"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+        app:layout_constraintTop_toBottomOf="@+id/emailTxtEditB" />
 
     <Button
-        android:id="@+id/addBtn"
+        android:id="@+id/memUpBtnEditB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="149dp"
@@ -204,10 +204,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText10" />
+        app:layout_constraintTop_toBottomOf="@+id/roomNoTxtEditB" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroupEditB"
         android:layout_width="216dp"
         android:layout_height="47dp"
         android:layout_marginStart="120dp"
@@ -217,17 +217,17 @@
         android:layout_marginRight="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/editText7">
+        app:layout_constraintTop_toBottomOf="@+id/nicTxtEditB">
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/maleRdioBtnEditB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/male" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/feMaleRdioBtnEditB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

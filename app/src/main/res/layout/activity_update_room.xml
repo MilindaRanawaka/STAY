@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/roomNoTxt"
+        android:id="@+id/roomNoTxt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -53,26 +53,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/addBtn"
+        android:id="@+id/roomUpdateBtn2"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="149dp"
-        android:layout_marginLeft="149dp"
-        android:layout_marginTop="49dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginRight="148dp"
-        android:layout_marginBottom="192dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="84dp"
         android:background="#9575CD"
         android:text="@string/updaRoom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acRadioGrp"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     <EditText
-        android:id="@+id/capacityTxt"
+        android:id="@+id/capacityTxt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -84,7 +77,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/priceTxt"
+        android:id="@+id/priceTxt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -114,17 +107,17 @@
         android:layout_marginEnd="84dp"
         android:layout_marginRight="84dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceTxt">
+        app:layout_constraintTop_toBottomOf="@+id/priceTxt2">
 
         <RadioButton
-            android:id="@+id/radioBtnAC"
+            android:id="@+id/radioBtnAC2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/ac" />
 
         <RadioButton
-            android:id="@+id/radioBtnNoAC"
+            android:id="@+id/radioBtnNoAC2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -145,5 +138,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/stay" />
+
+    <Button
+        android:id="@+id/roomDeleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginLeft="91dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginRight="83dp"
+        android:background="#9575CD"
+        android:text="@string/deleteRoom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/roomUpdateBtn2"
+        app:layout_constraintTop_toBottomOf="@+id/acRadioGrp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

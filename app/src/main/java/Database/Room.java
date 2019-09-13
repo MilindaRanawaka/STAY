@@ -11,6 +11,14 @@ public class Room {
     public Room() {
     }
 
+    public Room(String key, String roomID, int capacity, double price, String acType) {
+        this.key = key;
+        this.roomID = roomID;
+        this.capacity = capacity;
+        this.price = price;
+        this.acType = acType;
+    }
+
     public String getKey() {
         return key;
     }

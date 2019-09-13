@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/roomNoTxt"
+        android:id="@+id/roomNoTxtADD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/addBtn"
+        android:id="@+id/roomUpdateBtnADD"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginStart="149dp"
@@ -69,11 +69,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acRadioGrp"
+        app:layout_constraintTop_toBottomOf="@+id/acRadioGrpADD"
         app:layout_constraintVertical_bias="0.1" />
 
     <EditText
-        android:id="@+id/capacityTxt"
+        android:id="@+id/capacityTxtADD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/priceTxt"
+        android:id="@+id/priceTxtADD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -108,14 +108,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <RadioGroup
-        android:id="@+id/acRadioGrp"
+        android:id="@+id/acRadioGrpADD"
         android:layout_width="132dp"
         android:layout_height="70dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="84dp"
         android:layout_marginRight="84dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceTxt">
+        app:layout_constraintTop_toBottomOf="@+id/priceTxtADD">
 
         <RadioButton
             android:id="@+id/radioBtnAC"

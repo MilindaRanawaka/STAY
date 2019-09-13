@@ -301,6 +301,7 @@
     <string name="updaRoom">Update Room</string>
     <string name="enter_name">Enter Name</string>
     <string name="enter_room_id">Enter Room ID</string>
+    <string name="deleteRoom">Delete Room</string>
 
 
 </resources>

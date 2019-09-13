@@ -17,7 +17,7 @@
         android:layout_marginBottom="28dp"
         android:text="@string/msg8"
         android:textSize="80px"
-        app:layout_constraintBottom_toTopOf="@+id/roomNoTxt"
+        app:layout_constraintBottom_toTopOf="@+id/RoomNoTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,7 +64,7 @@
         android:layout_marginRight="32dp"
         android:layout_marginBottom="541dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/roomNoTxt"
+        app:layout_constraintEnd_toStartOf="@+id/RoomNoTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/peol" />
@@ -85,7 +85,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roomNoTxt"
+        app:layout_constraintTop_toBottomOf="@+id/RoomNoTxt"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -261,12 +261,12 @@
         android:inputType="textPersonName"
         android:text="@string/input7"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/addBtn"
+        app:layout_constraintEnd_toStartOf="@+id/roomUpdateBtn"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
     <Button
-        android:id="@+id/addBtn"
+        android:id="@+id/roomUpdateBtn"
         android:layout_width="140dp"
         android:layout_height="38dp"
         android:layout_marginStart="22dp"

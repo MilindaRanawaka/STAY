@@ -445,7 +445,7 @@
                 app:cardBackgroundColor="#51479797">
 
                 <TextView
-                    android:id="@+id/textView426"
+                    android:id="@+id/capacityTxtView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -455,7 +455,7 @@
                     android:text="@string/name1" />
 
                 <TextView
-                    android:id="@+id/textView428"
+                    android:id="@+id/roomNoTxtView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -465,7 +465,7 @@
                     android:text="@string/rID1" />
 
                 <TextView
-                    android:id="@+id/textView437"
+                    android:id="@+id/priceTxtView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -476,7 +476,7 @@
                     android:text="@string/idNo1" />
 
                 <TextView
-                    android:id="@+id/textView440"
+                    android:id="@+id/acTxtView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="150dp"
@@ -506,7 +506,7 @@
                     android:text="@string/male" />
 
                 <Button
-                    android:id="@+id/button411"
+                    android:id="@+id/roomUpdateBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_marginStart="270dp"
@@ -518,7 +518,7 @@
                     android:text="@string/btn81" />
 
                 <Button
-                    android:id="@+id/button412"
+                    android:id="@+id/roomUpdateBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:layout_marginStart="270dp"

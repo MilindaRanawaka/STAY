@@ -19,8 +19,6 @@ import com.example.stay.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.regex.Pattern;
-
 import Database.Room;
 
 public class Frag3 extends Fragment {
@@ -37,12 +35,12 @@ public class Frag3 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.add_room_layout,container,false);
 
-        roomNo = v.findViewById(R.id.roomNoTxt);
-        capacity = v.findViewById(R.id.capacityTxt);
-        price = v.findViewById(R.id.priceTxt);
-        acGrp = v.findViewById(R.id.acRadioGrp);
+        roomNo = v.findViewById(R.id.roomNoTxtADD);
+        capacity = v.findViewById(R.id.capacityTxtADD);
+        price = v.findViewById(R.id.priceTxtADD);
+        acGrp = v.findViewById(R.id.acRadioGrpADD);
 
-        addBtn = v.findViewById(R.id.addBtn);
+        addBtn = v.findViewById(R.id.roomUpdateBtnADD);
 
         int selectedId = acGrp.getCheckedRadioButtonId();
         acBtn = v.findViewById(selectedId);
@@ -63,6 +61,8 @@ public class Frag3 extends Fragment {
                 }
             }
         });
+
+
 
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +86,6 @@ public class Frag3 extends Fragment {
                     room.setRoomID(roomNo.getText().toString());
                     room.setCapacity(Integer.parseInt(capacity.getText().toString()));
                     room.setPrice(Double.parseDouble(price.getText().toString()));
-                    //room.setAcType(acBtn.getText().toString());
 
 
                     dbRef.child(room.getKey()).setValue(room);
