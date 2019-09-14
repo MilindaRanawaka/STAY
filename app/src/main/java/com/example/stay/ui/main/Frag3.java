@@ -76,7 +76,7 @@ public class Frag3 extends Fragment {
                     Toast.makeText(getActivity(),"Please Enter Capacity",Toast.LENGTH_SHORT).show();
                 }
                 else if(TextUtils.isEmpty(price.getText().toString())){
-                    Toast.makeText(getActivity(),"Please Enter Address",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"Please Enter Price",Toast.LENGTH_SHORT).show();
                 }
                 else if(acGrp.getCheckedRadioButtonId() == -1){
                     Toast.makeText(getActivity(),"Please Choose AC Type",Toast.LENGTH_SHORT).show();
