@@ -18,9 +18,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/viewBoarderDob"
+        android:id="@+id/viewBoarderNIC"
         android:layout_width="161dp"
-        android:layout_height="37dp"
+        android:layout_height="35dp"
         android:layout_marginStart="43dp"
         android:layout_marginLeft="43dp"
         android:layout_marginEnd="50dp"
@@ -28,4 +28,26 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/viewBoarderName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/viewBoarderName" />
+
+    <TextView
+        android:id="@+id/viewBoarderPhno"
+        android:layout_width="127dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewBoarderName" />
+
+    <TextView
+        android:id="@+id/viewBoarderRoomNo"
+        android:layout_width="161dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/viewBoarderPhno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewBoarderPhno" />
 </androidx.constraintlayout.widget.ConstraintLayout>

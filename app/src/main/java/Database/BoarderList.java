@@ -32,12 +32,16 @@ public class BoarderList extends ArrayAdapter<Boarder> {
         View listViewItem = inflater.inflate(R.layout.view_boarder_layout_list,null,true);
 
         TextView textno11 = (TextView) listViewItem.findViewById(R.id.viewBoarderName);
-        TextView txtno22 =(TextView) listViewItem.findViewById(R.id.viewBoarderDob);
+        TextView txtno22 =(TextView) listViewItem.findViewById(R.id.viewBoarderNIC);
+        TextView txtno33 = (TextView) listViewItem.findViewById(R.id.viewBoarderPhno);
+        TextView txtno44 = (TextView) listViewItem.findViewById(R.id.viewBoarderRoomNo);
 
         Boarder boarder = boarderList.get(position);
 
         textno11.setText(boarder.getName());
-        txtno22.setText(boarder.getDob());
+        txtno22.setText(boarder.getNic());
+        txtno33.setText(String.valueOf(boarder.getPhNo()));
+        txtno44.setText(boarder.getRoomNo());
 
         return listViewItem;
     }
