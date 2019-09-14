@@ -20,7 +20,7 @@ import Database.Room;
 public class UpdateRoomActivity extends AppCompatActivity {
 
     EditText roomNo,capacity,price;
-    RadioButton acBtn1;
+    RadioButton acBtn,acBtn1;
     RadioButton acBtn2;
     RadioGroup acGrp;
     Button updateBtn,deleteBtn;
@@ -79,27 +79,13 @@ public class UpdateRoomActivity extends AppCompatActivity {
                 room.setCapacity(Integer.parseInt(capacity.getText().toString()));
                 room.setPrice(Double.parseDouble(price.getText().toString()));
 
-                acGrp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                        switch (i){
-                            case R.id.radioBtnAC2:
-                                room.setAcType("AC");
-                                break;
-                            case R.id.radioBtnNoAC2:
-                                room.setAcType("NonAC");
-                                break;
-                        }
-                    }
-                });
+                int selectedId = acGrp.getCheckedRadioButtonId();
+                acBtn = (RadioButton) findViewById(selectedId);
+
+                room.setAcType(acBtn.getText().toString());
 
                 dbRef.setValue(room);
                 Toast.makeText(getApplicationContext(),"Room No: "+room.getRoomID()+" Updated",Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(),""+room.getRoomID()+"",Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(),""+room.getCapacity()+"",Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(),""+room.getPrice()+"",Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(),""+room.getKey()+"",Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(),""+room.getAcType()+"",Toast.LENGTH_SHORT).show();
             }
         });
 

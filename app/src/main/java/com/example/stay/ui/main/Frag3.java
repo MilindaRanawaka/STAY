@@ -42,8 +42,8 @@ public class Frag3 extends Fragment {
 
         addBtn = v.findViewById(R.id.roomUpdateBtnADD);
 
-        int selectedId = acGrp.getCheckedRadioButtonId();
-        acBtn = v.findViewById(selectedId);
+        //int selectedId = acGrp.getCheckedRadioButtonId();
+        //acBtn = v.findViewById(selectedId);
 
         room = new Room();
 

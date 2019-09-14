@@ -53,8 +53,6 @@ public class Frag4 extends Fragment {
 
         roomArrList = new ArrayList<>();
 
-        cardView = (CardView) roomList.findViewById(R.id.cardView5);
-
         roomList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

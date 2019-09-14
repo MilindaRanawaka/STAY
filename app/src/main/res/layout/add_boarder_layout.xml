@@ -167,25 +167,13 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/roomNoTxtAddB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:hint="@string/roomNo"
-        android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <Button
         android:id="@+id/addMemBtnAddB"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginStart="149dp"
         android:layout_marginLeft="149dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="106dp"
         android:layout_marginEnd="148dp"
         android:layout_marginRight="148dp"
         android:layout_marginBottom="50dp"
@@ -195,7 +183,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roomNoTxtAddB" />
+        app:layout_constraintTop_toBottomOf="@+id/roomNoSpinnerAddB" />
 
     <RadioGroup
         android:id="@+id/radioGroupAddB"
@@ -224,5 +212,18 @@
             android:layout_weight="1"
             android:text="@string/female" />
     </RadioGroup>
+
+    <Spinner
+        android:id="@+id/roomNoSpinnerAddB"
+        android:layout_width="215dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginLeft="74dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/emailTxtAddB" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

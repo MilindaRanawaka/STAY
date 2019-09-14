@@ -288,7 +288,7 @@
     <string name="early_leave_request">Early Leave Request</string>
     <string name="ac_nonAc">AC / Non-AC</string>
     <string name="ac">AC</string>
-    <string name="non_ac">Non-AC</string>
+    <string name="non_ac">NonAC</string>
     <string name="upMem">Update Members</string>
     <string name="reason1">Because of Pirith Ceromony in SLIIT</string>
     <string name="trip">Participate to Annual Trip</string>
@@ -302,8 +302,7 @@
     <string name="enter_name">Enter Name</string>
     <string name="enter_room_id">Enter Room ID</string>
     <string name="deleteRoom">Delete Room</string>
+    <string name="delete_members">Delete Members</string>
 
-
-    
 
 </resources>

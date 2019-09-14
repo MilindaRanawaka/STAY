@@ -7,6 +7,23 @@
     android:background="@drawable/back"
     tools:context=".EditBoardersActivity">
 
+    <Button
+        android:id="@+id/memDelBtnEditB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:width="150dp"
+        android:height="50dp"
+        android:background="#9575CD"
+        android:text="@string/delete_members"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/memUpBtnEditB"
+        app:layout_constraintTop_toBottomOf="@+id/roomNoTxtEditB" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -191,20 +208,15 @@
         android:id="@+id/memUpBtnEditB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="149dp"
-        android:layout_marginLeft="149dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginRight="148dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="79dp"
         android:width="150dp"
         android:height="50dp"
         android:background="#9575CD"
         android:text="@string/upMem"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roomNoTxtEditB" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <RadioGroup
         android:id="@+id/radioGroupEditB"
