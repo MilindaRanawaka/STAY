@@ -34,8 +34,6 @@ public class BoarderRequestFoodActivity extends AppCompatActivity {
         ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
         listView.setAdapter(arrayAdapter);
 
-        //this is a comment
-
     }
 }
 
