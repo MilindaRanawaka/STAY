@@ -306,7 +306,16 @@
     <string name="update_btn">Update</string>
     <string name="delete_btn">DELETE</string>
 
-
+    <array name="genres">
+        <item>Rice and Curry</item>
+        <item>Milk Rice</item>
+        <item>Fried Rice</item>
+        <item>Hoppers</item>
+        <item>String Hoppers</item>
+        <item>Noodles</item>
+        <item>Nasi Goreng</item>
+        <item>Special Soup</item>
+    </array>
     
 
 </resources>
