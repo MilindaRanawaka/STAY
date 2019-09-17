@@ -179,6 +179,7 @@ public class AddPayment extends AppCompatActivity {
 
                     dbRefPay.child(pay.getKey()).setValue(pay);
                     Toast.makeText(getApplicationContext(),"Data Added Succesfully",Toast.LENGTH_SHORT).show();
+                    ClearControls();
                 }
             }
         });
@@ -187,6 +188,19 @@ public class AddPayment extends AppCompatActivity {
 
 
 
+
+
+
+    }
+
+    private void ClearControls(){
+        boarderID.setText("");
+        boarderName.setText("");
+        boarderPhone.setText("");
+        roomGrp.clearCheck();
+        payAmount.setText("");
+        bankSpnr.setSelection(0);
+        payDate.setText("");
 
 
 
