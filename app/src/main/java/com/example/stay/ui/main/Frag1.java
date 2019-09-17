@@ -113,6 +113,8 @@ public class Frag1 extends Fragment {
                     dbRef.child(boarder.getKey()).setValue(boarder);
 
                     Toast.makeText(getActivity(),"Data Added Succesfully",Toast.LENGTH_SHORT).show();
+
+                    Clear();
                 }
             }
         });
@@ -141,5 +143,17 @@ public class Frag1 extends Fragment {
 
             }
         });
+    }
+
+    public void Clear(){
+        name.setText("");
+        dob.setText("");
+        address.setText("");
+        nic.setText("");
+        phNO.setText("");
+        email.setText("");
+        addBtn.setText("");
+        acGrp.clearCheck();
+
     }
 }

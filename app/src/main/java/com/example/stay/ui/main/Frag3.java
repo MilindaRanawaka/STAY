@@ -98,4 +98,11 @@ public class Frag3 extends Fragment {
 
         return v;
     }
+
+    public void clear(){
+        roomNo.setText("");
+        capacity.setText("");
+        price.setText("");
+        acGrp.clearCheck();
+    }
 }
