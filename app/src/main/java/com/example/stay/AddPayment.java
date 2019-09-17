@@ -169,7 +169,16 @@ public class AddPayment extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Please Enter Date",Toast.LENGTH_SHORT).show();
                 }
                 else{
+                    pay.setKey(dbRefPay.push().getKey());
+                    pay.setUserID(boarderID.getText().toString());
+                    pay.setName(boarderName.getText().toString());
+                    pay.setPhoneNo(Integer.parseInt(boarderPhone.getText().toString()));
+                    pay.setPayAmount(Double.parseDouble(payAmount.getText().toString()));
+                    pay.setBank(bankSpnr.getSelectedItem().toString());
+                    pay.setPayDate(payDate.getText().toString());
 
+                    dbRefPay.child(pay.getKey()).setValue(pay);
+                    Toast.makeText(getApplicationContext(),"Data Added Succesfully",Toast.LENGTH_SHORT).show();
                 }
             }
         });
