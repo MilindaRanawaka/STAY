@@ -306,6 +306,20 @@
     <string name="update_btn">Update</string>
     <string name="delete_btn">DELETE</string>
 
+    <string name="PayName">Enter Your Name</string>
+    <string name="PayUserID">Enter Your ID</string>
+    <string name="PayPhone">Enter Your Phone Number</string>
+    <string name="PayRoomType">Room Type</string>
+    <string name="Payamount">Enter Pay Amount</string>
+    <array name="Banks">
+        <item>Enter Bank</item>
+        <item>Sampath</item>
+        <item>Peoples Bank</item>
+    </array>
+    <string name="PayDate">Enter Date Paid</string>
+    <string name="radio1">Non AC</string>
+    <string name="radio2">AC</string>
+
     <array name="genres">
         <item>Rice and Curry</item>
         <item>Milk Rice</item>
@@ -316,6 +330,6 @@
         <item>Nasi Goreng</item>
         <item>Special Soup</item>
     </array>
-    
+
 
 </resources>
