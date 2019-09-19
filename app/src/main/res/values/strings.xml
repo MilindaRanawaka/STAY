@@ -331,6 +331,7 @@
         <item>Nasi Goreng</item>
         <item>Special Soup</item>
     </array>
+    <string name="btnpaymentu">Update</string>
 
 
 </resources>
