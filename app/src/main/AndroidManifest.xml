@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".OrderFoodApproval" />
+        <activity android:name=".BoarderUpdateOrder" />
+        <activity android:name=".BoarderLeaveUpdate" />
         <activity android:name=".EditAdminActivity"></activity>
         <activity
             android:name=".ManageAdmin"
             android:label="@string/title_activity_manage_admin"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".BoarderLeaveUpdate" />
         <activity android:name=".UpdateRoomActivity" />
         <activity android:name=".EditBoardersActivity" />
         <activity android:name=".MngLeaveReqActivity" />

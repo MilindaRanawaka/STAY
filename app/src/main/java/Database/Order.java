@@ -1,26 +1,42 @@
 package Database;
 
 public class Order {
-    String orderID;
-    String Name;
-    String RNo;
-    String bgenre;
+
+    private String orderID;
+    private String Name;
+    private String RNo;
+    private String bgenre;
+    private String ApprovalState;
+
 
     public Order() {
     }
 
-    public Order(String orderID, String name, String RNo, String bgenre) {
+    public Order(String orderID, String name, String RNo, String bgenre, String approvalState) {
         this.orderID = orderID;
-        this.Name = name;
+        Name = name;
         this.RNo = RNo;
         this.bgenre = bgenre;
+        ApprovalState = approvalState;
     }
 
+    public String getApprovalState() {
+        return ApprovalState;
+    }
+
+    public void setApprovalState(String approvalState) {
+        ApprovalState = approvalState;
+    }
+
+    //Getters
+
     public String getOrderID() {
+
         return orderID;
     }
 
     public String getName() {
+
         return Name;
     }
 
@@ -29,8 +45,11 @@ public class Order {
     }
 
     public String getBgenre() {
+
         return bgenre;
     }
+
+//Setters
 
     public void setOrderID(String orderID) {
         this.orderID = orderID;
@@ -47,4 +66,6 @@ public class Order {
     public void setBgenre(String bgenre) {
         this.bgenre = bgenre;
     }
+
+
 }

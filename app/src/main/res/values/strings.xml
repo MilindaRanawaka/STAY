@@ -265,7 +265,9 @@
     <string name="req">Early Leave Request</string>
 
     <string name="view_req">View Request</string>
+
     <string name="stay">Stay App</string>
+
     <string name="tvFoodOrder">Foods</string>
     <string name="tvtoday">Today Orders</string>
     <string name="tvDueOrder">Due Orders</string>
@@ -280,9 +282,9 @@
     <string name="ml4">Room No : 10</string>
     <string name="ml5">Dulashni Amanda</string>
     <string name="ml6">Room No : 20</string>
-
     <string name="ml7">Ashani Malsha</string>
     <string name="ml8">Room No : 22</string>
+
     <string name="brdName">Boarder Name</string>
     <string name="room_no">Room No</string>
     <string name="reason">Reason For Leave</string>
@@ -332,12 +334,18 @@
     <string name="radio2">AC</string>
     <string name="add_Admin">Add Admin</string>
     <string name="view_Admin">View Admin</string>
+    <string name="edName">textPersonName</string>
+    <string name="edRNo">textPersonRno</string>
+    <string name="btnAccept">Accept</string>
+    <string name="brnReject">Reject</string>
+    <string name="tvOrder">Order</string>
 
     <string name="manage_Admin">Manage Admin</string>
     <string name="title_activity_manage_admin">ManageAdmin</string>
     <string name="adminName">Admin Name</string>
     <string name="updateAdmin">Update Admin</string>
     <string name="deleteAdmin">Delete Admin</string>
+    <string name="welcome">Welcome !!!</string>
 
 
 </resources>

@@ -34,9 +34,6 @@ public class BoarderRequestFoodActivity extends AppCompatActivity {
     Spinner spinnerGenres;
     DatabaseReference dbRef;
     Order order;
-
-    ListView listViewOrder;
-    List<Order> orderList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,9 +47,6 @@ public class BoarderRequestFoodActivity extends AppCompatActivity {
         btnOrder = findViewById(R.id.btnOrder22);
         spinnerGenres = findViewById(R.id.spinner2);
 
-        listViewOrder= findViewById(R.id.lvOrder);
-        orderList = new ArrayList<>();
-
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,31 +54,9 @@ public class BoarderRequestFoodActivity extends AppCompatActivity {
             }
         });
 
-    }
+        }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
 
-        dbRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot orderSnapshot : dataSnapshot.getChildren()){
-                    Order order=orderSnapshot.getValue(Order.class);
-
-                    orderList.add(order);
-                }
-
-                OrderList adapter=new OrderList(BoarderRequestFoodActivity.this,orderList);
-                listViewOrder.setAdapter(adapter);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
 
     private void addOrder() {
         String name=edName.getText().toString().trim();
@@ -93,7 +65,7 @@ public class BoarderRequestFoodActivity extends AppCompatActivity {
 
         if(!TextUtils.isEmpty(name)){
             String  id=dbRef.push().getKey();
-            order = new Order(id,name,RoomNo,genre);
+            order = new Order(id,name,RoomNo,genre,"Pending");
 
             dbRef.child(id).setValue(order);
             Toast.makeText(getApplicationContext(),"Adding Success",Toast.LENGTH_LONG).show();

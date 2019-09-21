@@ -39,11 +39,13 @@ public class OrderList extends ArrayAdapter<Order> {
         TextView tvRNo=(TextView) listViewItem.findViewById(R.id.tvRNo);
         TextView tvgenre=(TextView) listViewItem.findViewById(R.id.tvGenre);
 
+
         Order order=orderList.get(position);
 
         tvName.setText(order.getName());
         tvRNo.setText(order.getRNo());
         tvgenre.setText(order.getBgenre());
+
 
         return listViewItem;
     }
