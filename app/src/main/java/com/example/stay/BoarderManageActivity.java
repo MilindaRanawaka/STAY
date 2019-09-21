@@ -67,6 +67,15 @@ public class BoarderManageActivity extends AppCompatActivity {
                     nicTxt.setText(boarder.getNic());
                     phNoTxt.setText(boarder.getPhNo().toString());
                     emailTxt.setText(boarder.getEmail());
+
+                    if (boarder.getGender().equals("Male")){
+                        maleRadioBtn.toggle();
+                        boarder.setGender("Male");
+                    }
+                    else if (boarder.getGender().equals("Female")){
+                        femaleRadioBtm.toggle();
+                        boarder.setGender("Female");
+                    }
                 }
             }
         }
