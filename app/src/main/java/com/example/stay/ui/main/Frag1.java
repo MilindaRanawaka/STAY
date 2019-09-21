@@ -112,7 +112,7 @@ public class Frag1 extends Fragment {
 
                     dbRef.child(boarder.getKey()).setValue(boarder);
 
-                    Toast.makeText(getActivity(),"Data Added Succesfully",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"Data Added Successfully",Toast.LENGTH_SHORT).show();
 
                     Clear();
                 }
