@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import Database.LoginData;
 import Database.Order;
 import Database.OrderList;
 
@@ -65,7 +66,7 @@ public class BoarderRequestFoodActivity extends AppCompatActivity {
 
         if(!TextUtils.isEmpty(name)){
             String  id=dbRef.push().getKey();
-            order = new Order(id,name,RoomNo,genre,"Pending");
+            order = new Order(id,name,RoomNo,genre,"Pending", LoginData.userKey);
 
             dbRef.child(id).setValue(order);
             Toast.makeText(getApplicationContext(),"Adding Success",Toast.LENGTH_LONG).show();

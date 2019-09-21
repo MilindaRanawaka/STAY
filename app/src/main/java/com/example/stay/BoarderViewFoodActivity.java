@@ -13,6 +13,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -41,8 +42,10 @@ public class BoarderViewFoodActivity extends AppCompatActivity {
 
         listViewOrder=(ListView) findViewById(R.id.listViewNewRef);
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Order");
         orderList = new ArrayList<>();
+
+        Query query = FirebaseDatabase.getInstance().getReference("Order").orderByChild("userKey").equalTo(LoginData.userKey);
+        query.addListenerForSingleValueEvent(valueEventListener);
 
         listViewOrder.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
@@ -63,27 +66,24 @@ public class BoarderViewFoodActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+    ValueEventListener valueEventListener = new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            for(DataSnapshot orderSnapshot : dataSnapshot.getChildren()){
+                Order order=orderSnapshot.getValue(Order.class);
 
-        dbRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot orderSnapshot : dataSnapshot.getChildren()){
-                    Order order=orderSnapshot.getValue(Order.class);
-
-                    orderList.add(order);
-                }
-
-                OrderList adapter=new OrderList(BoarderViewFoodActivity.this,orderList);
-                listViewOrder.setAdapter(adapter);
+                orderList.add(order);
             }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            OrderList adapter=new OrderList(BoarderViewFoodActivity.this,orderList);
+            listViewOrder.setAdapter(adapter);
+        }
 
-            }
-        });
-    }
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+        }
+    };
+
+
 }
