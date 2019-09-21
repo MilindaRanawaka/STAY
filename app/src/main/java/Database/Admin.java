@@ -1,6 +1,6 @@
 package Database;
 
-public class Boarder {
+public class Admin {
 
     private String key;
     private String name;
@@ -10,12 +10,11 @@ public class Boarder {
     private String gender;
     private Long phNo;
     private String email;
-    private String roomNo;
 
-    public Boarder() {
+    public Admin() {
     }
 
-    public Boarder(String key, String name, String dob, String address, String nic, String gender, Long phNo, String email, String roomNo) {
+    public Admin(String key, String name, String dob, String address, String nic, String gender, Long phNo, String email) {
         this.key = key;
         this.name = name;
         this.dob = dob;
@@ -24,7 +23,6 @@ public class Boarder {
         this.gender = gender;
         this.phNo = phNo;
         this.email = email;
-        this.roomNo = roomNo;
     }
 
     public String getKey() {
@@ -89,13 +87,5 @@ public class Boarder {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getRoomNo() {
-        return roomNo;
-    }
-
-    public void setRoomNo(String roomNo) {
-        this.roomNo = roomNo;
     }
 }

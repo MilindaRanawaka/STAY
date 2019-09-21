@@ -5,7 +5,6 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -18,57 +17,47 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.stay.R;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import Database.Admin;
 import Database.Boarder;
 
-public class Frag1 extends Fragment {
+public class Frag5 extends Fragment {
 
     EditText name,dob,address,nic,phNO,email;
-    Spinner roomNo;
     RadioButton acBtn;
     RadioGroup acGrp;
     Button addBtn;
     DatabaseReference dbRef;
-    DatabaseReference dbRefRoom = FirebaseDatabase.getInstance().getReference("Room");
-    Boarder boarder;
+    Admin admin;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.add_boarder_layout, container, false);
+        View view = inflater.inflate(R.layout.add_admin_layout,container,false);
 
-        name = view.findViewById(R.id.nameTxtAddB);
-        dob = view.findViewById(R.id.enterDOBADDB);
-        address = view.findViewById(R.id.addressTxtAddB);
-        nic = view.findViewById(R.id.nicTxtAddB);
-        phNO = view.findViewById(R.id.phNoTxtAddB);
-        email = view.findViewById(R.id.emailTxtAddB);
-        addBtn = view.findViewById(R.id.addMemBtnAddB);
-        roomNo = view.findViewById(R.id.roomNoSpinnerAddB);
-        acGrp = view.findViewById(R.id.radioGroupAddB);
+        name = view.findViewById(R.id.nameTxtAddA);
+        dob = view.findViewById(R.id.enterDOBADDA);
+        address = view.findViewById(R.id.addressTxtAddA);
+        nic = view.findViewById(R.id.nicTxtAddA);
+        phNO = view.findViewById(R.id.phNoTxtAddA);
+        email = view.findViewById(R.id.emailTxtAddA);
+        addBtn = view.findViewById(R.id.addMemBtnAddA);
+        acGrp = view.findViewById(R.id.radioGroupAddA);
 
-        fillSpinner();
-
-        boarder = new Boarder();
+        admin = new Admin();
 
         acBtn = view.findViewById(acGrp.getCheckedRadioButtonId());
         acGrp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 switch (i){
-                    case R.id.maleRdioBtnAddB:
-                        boarder.setGender("Male");
+                    case R.id.maleRdioBtnAddA:
+                        admin.setGender("Male");
                         break;
-                    case R.id.feMaleRdioBtnAddB:
-                       boarder.setGender("Female");
+                    case R.id.feMaleRdioBtnAddA:
+                        admin.setGender("Female");
                         break;
                 }
             }
@@ -77,7 +66,8 @@ public class Frag1 extends Fragment {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dbRef = FirebaseDatabase.getInstance().getReference("Boarders");
+
+                dbRef = FirebaseDatabase.getInstance().getReference("Admin");
 
                 if(TextUtils.isEmpty(name.getText().toString())){
                     Toast.makeText(getActivity(),"Please Enter Name",Toast.LENGTH_SHORT).show();
@@ -101,16 +91,15 @@ public class Frag1 extends Fragment {
                     Toast.makeText(getActivity(),"Please Enter Email",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    boarder.setKey(dbRef.push().getKey());
-                    boarder.setName(name.getText().toString());
-                    boarder.setDob(dob.getText().toString());
-                    boarder.setAddress(address.getText().toString());
-                    boarder.setNic(nic.getText().toString());
-                    boarder.setPhNo(Long.parseLong(phNO.getText().toString()));
-                    boarder.setEmail(email.getText().toString());
-                    boarder.setRoomNo(roomNo.getSelectedItem().toString());
+                    admin.setKey(dbRef.push().getKey());
+                    admin.setName(name.getText().toString());
+                    admin.setDob(dob.getText().toString());
+                    admin.setAddress(address.getText().toString());
+                    admin.setNic(nic.getText().toString());
+                    admin.setPhNo(Long.parseLong(phNO.getText().toString()));
+                    admin.setEmail(email.getText().toString());
 
-                    dbRef.child(boarder.getKey()).setValue(boarder);
+                    dbRef.child(admin.getKey()).setValue(admin);
 
                     Toast.makeText(getActivity(),"Data Added Succesfully",Toast.LENGTH_SHORT).show();
 
@@ -120,29 +109,6 @@ public class Frag1 extends Fragment {
         });
 
         return view;
-    }
-
-
-    public void fillSpinner(){
-        dbRefRoom.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                final List<String> room = new ArrayList<String>();
-
-                for (DataSnapshot areaSnapshot: dataSnapshot.getChildren()) {
-                    String roomID = areaSnapshot.child("roomID").getValue(String.class);
-                    room.add(roomID);
-                }
-                ArrayAdapter<String> areasAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, room);
-                areasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                roomNo.setAdapter(areasAdapter);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
     }
 
     public void Clear(){

@@ -13,12 +13,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="44dp"
-        android:text="@string/bdrName"
+        android:text="@string/adminName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nameTxtAddB"
+        android:id="@+id/nameTxtAddA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -95,19 +95,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="42dp"
-        android:text="@string/room"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
     <EditText
-        android:id="@+id/enterDOBADDB"
+        android:id="@+id/enterDOBADDA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -119,7 +108,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/addressTxtAddB"
+        android:id="@+id/addressTxtAddA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -132,7 +121,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/nicTxtAddB"
+        android:id="@+id/nicTxtAddA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -144,7 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/phNoTxtAddB"
+        android:id="@+id/phNoTxtAddA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -156,7 +145,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/emailTxtAddB"
+        android:id="@+id/emailTxtAddA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -168,15 +157,15 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/addMemBtnAddB"
+        android:id="@+id/addMemBtnAddA"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginStart="149dp"
         android:layout_marginLeft="149dp"
-        android:layout_marginTop="106dp"
+        android:layout_marginTop="149dp"
         android:layout_marginEnd="148dp"
         android:layout_marginRight="148dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="70dp"
         android:width="120dp"
         android:background="#9575CD"
         android:text="@string/add"
@@ -184,11 +173,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roomNoSpinnerAddB"
-        app:layout_constraintVertical_bias="0.47000003" />
+        app:layout_constraintTop_toBottomOf="@+id/emailTxtAddA" />
 
     <RadioGroup
-        android:id="@+id/radioGroupAddB"
+        android:id="@+id/radioGroupAddA"
         android:layout_width="216dp"
         android:layout_height="47dp"
         android:layout_marginStart="120dp"
@@ -198,34 +186,21 @@
         android:layout_marginRight="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/nicTxtAddB">
+        app:layout_constraintTop_toBottomOf="@+id/nicTxtAddA">
 
         <RadioButton
-            android:id="@+id/maleRdioBtnAddB"
+            android:id="@+id/maleRdioBtnAddA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/male" />
 
         <RadioButton
-            android:id="@+id/feMaleRdioBtnAddB"
+            android:id="@+id/feMaleRdioBtnAddA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/female" />
     </RadioGroup>
-
-    <Spinner
-        android:id="@+id/roomNoSpinnerAddB"
-        android:layout_width="215dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginLeft="74dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/emailTxtAddB" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -66,7 +66,7 @@ public class EditBoardersActivity extends AppCompatActivity {
         final String email = intent.getStringExtra(Frag2.BOARDER_EMAIL);
         final String gender = intent.getStringExtra(Frag2.BOARDER_GENDER);
         final String nic = intent.getStringExtra(Frag2.BOARDER_NIC);
-        final int phno = intent.getIntExtra(Frag2.BOARDER_PHNO,0);
+        final Long phno = intent.getLongExtra(Frag2.BOARDER_PHNO,0);
         final String roomNo = intent.getStringExtra(Frag2.BOARDER_ROOMNO);
 
         nameTxt.setText(name);
@@ -74,7 +74,7 @@ public class EditBoardersActivity extends AppCompatActivity {
         addressTxt.setText(address);
         nicTxt.setText(nic);
         emailTxt.setText(email);
-        phNoTxt.setText(Integer.toString(phno));
+        phNoTxt.setText(Long.toString(phno));
         //roomNoTxt.setText(roomNo);
 
         if (gender.equals("Male")){
@@ -102,7 +102,7 @@ public class EditBoardersActivity extends AppCompatActivity {
                 boarder.setAddress(addressTxt.getText().toString());
                 boarder.setEmail(emailTxt.getText().toString());
                 boarder.setNic(nicTxt.getText().toString());
-                boarder.setPhNo(Integer.parseInt(phNoTxt.getText().toString()));
+                boarder.setPhNo(Long.parseLong(phNoTxt.getText().toString()));
                 //boarder.setRoomNo(roomNoTxt.getText().toString());
 
                 int selectedId = genRadioGrp.getCheckedRadioButtonId();
@@ -110,8 +110,7 @@ public class EditBoardersActivity extends AppCompatActivity {
                 boarder.setGender(radioBtn.getText().toString());
 
                 dbRef.setValue(boarder);
-                Toast.makeText(getApplicationContext(),"Room No: "+boarder.getName()+"'s Details Updated",Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(),""+boarder.getKey()+"",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Admin Name: "+boarder.getName()+"'s Details Updated",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -119,6 +118,7 @@ public class EditBoardersActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dbRef.removeValue();
+                Toast.makeText(getApplicationContext(),"Admin Details Deleted",Toast.LENGTH_SHORT).show();
             }
         });
     }

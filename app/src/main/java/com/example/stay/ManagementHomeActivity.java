@@ -40,4 +40,9 @@ public class ManagementHomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this,MngLeaveReqActivity.class);
         startActivity(intent);
     }
+
+    public void onAdminClick(View view){
+        Intent intent = new Intent(this,ManageAdmin.class);
+        startActivity(intent);
+    }
 }

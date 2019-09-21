@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back">
+    android:background="@drawable/back"
+    tools:context=".EditAdminActivity">
 
     <TextView
         android:id="@+id/textView2"
@@ -13,12 +14,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="44dp"
-        android:text="@string/bdrName"
+        android:text="@string/adminName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nameTxtAddB"
+        android:id="@+id/nameTxtEditA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -95,19 +96,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="42dp"
-        android:text="@string/room"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
     <EditText
-        android:id="@+id/enterDOBADDB"
+        android:id="@+id/enterDOBEditA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -119,7 +109,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/addressTxtAddB"
+        android:id="@+id/addressTxtEditA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -132,7 +122,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/nicTxtAddB"
+        android:id="@+id/nicTxtEditA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -144,7 +134,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/phNoTxtAddB"
+        android:id="@+id/phNoTxtEditA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -156,7 +146,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/emailTxtAddB"
+        android:id="@+id/emailTxtEditA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -168,27 +158,38 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/addMemBtnAddB"
-        android:layout_width="wrap_content"
+        android:id="@+id/memUpBtnEditA"
+        android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginStart="149dp"
-        android:layout_marginLeft="149dp"
-        android:layout_marginTop="106dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginRight="148dp"
-        android:layout_marginBottom="100dp"
-        android:width="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="118dp"
+        android:width="150dp"
+        android:height="50dp"
         android:background="#9575CD"
-        android:text="@string/add"
+        android:text="@string/updateAdmin"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roomNoSpinnerAddB"
-        app:layout_constraintVertical_bias="0.47000003" />
+        app:layout_constraintEnd_toStartOf="@+id/memDelBtnEditB"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/memDelBtnEditA"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginBottom="118dp"
+        android:width="150dp"
+        android:height="50dp"
+        android:background="#9575CD"
+        android:text="@string/deleteAdmin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroupAddB"
+        android:id="@+id/radioGroupEditA"
         android:layout_width="216dp"
         android:layout_height="47dp"
         android:layout_marginStart="120dp"
@@ -198,34 +199,21 @@
         android:layout_marginRight="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/nicTxtAddB">
+        app:layout_constraintTop_toBottomOf="@+id/nicTxtEditA">
 
         <RadioButton
-            android:id="@+id/maleRdioBtnAddB"
+            android:id="@+id/maleRdioBtnEditA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/male" />
 
         <RadioButton
-            android:id="@+id/feMaleRdioBtnAddB"
+            android:id="@+id/feMaleRdioBtnEditA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/female" />
     </RadioGroup>
-
-    <Spinner
-        android:id="@+id/roomNoSpinnerAddB"
-        android:layout_width="215dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginLeft="74dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/emailTxtAddB" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
