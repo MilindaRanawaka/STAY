@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.text.LoginFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,36 +16,37 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import Database.Admin;
 import Database.Boarder;
 import Database.EncryptDecrypt;
 import Database.LoginData;
 
-public class BoarderUpdatePwdActivity extends AppCompatActivity {
+public class AdminChangePwdActivity extends AppCompatActivity {
 
     EditText name,pwd,confirmPwd;
     Button updatePwd;
     DatabaseReference dbRef;
-    Boarder boarder;
+    Admin admin;
     String pwdStr;
     String confirmPwdStr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_boarder_update_pwd);
+        setContentView(R.layout.activity_admin_change_pwd);
 
-        name=findViewById(R.id.boarderNameUpdatePwd);
-        pwd=findViewById(R.id.newPwdTxt);
-        confirmPwd=findViewById(R.id.confirmPwdTxt);
-        updatePwd=findViewById(R.id.pwdUpdateBtn);
+        name=findViewById(R.id.adminNameUpdatePwd);
+        pwd=findViewById(R.id.newPwdTxtAdmin);
+        confirmPwd=findViewById(R.id.confirmPwdTxtAdmin);
+        updatePwd=findViewById(R.id.pwdUpdateBtnAdmin);
 
         name.setText(LoginData.userName);
         name.setEnabled(false);
 
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Boarders").child(LoginData.userKey);
+        dbRef = FirebaseDatabase.getInstance().getReference("Admin").child(LoginData.userKey);
 
-        Query query = FirebaseDatabase.getInstance().getReference("Boarders").orderByChild("key").equalTo(LoginData.userKey);
+        Query query = FirebaseDatabase.getInstance().getReference("Admin").orderByChild("key").equalTo(LoginData.userKey);
         query.addListenerForSingleValueEvent(valueEventListener);
 
         updatePwd.setOnClickListener(new View.OnClickListener() {
@@ -55,8 +55,8 @@ public class BoarderUpdatePwdActivity extends AppCompatActivity {
                 pwdStr = pwd.getText().toString();
                 confirmPwdStr = confirmPwd.getText().toString();
                 if(pwdStr.equals(confirmPwdStr)){
-                    boarder.setPassword(EncryptDecrypt.encryptIt(pwdStr));
-                    dbRef.setValue(boarder);
+                    admin.setPassword(EncryptDecrypt.encryptIt(pwdStr));
+                    dbRef.setValue(admin);
                     Toast.makeText(getApplicationContext(),"Password Update",Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(getApplicationContext(),"Please Check Passwords",Toast.LENGTH_SHORT).show();
@@ -73,7 +73,7 @@ public class BoarderUpdatePwdActivity extends AppCompatActivity {
         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
             if (dataSnapshot.exists()) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    boarder = snapshot.getValue(Boarder.class);
+                    admin = snapshot.getValue(Admin.class);
                 }
             }
         }

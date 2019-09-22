@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
-    tools:context=".BoarderUpdatePwdActivity">
+    tools:context=".AdminChangePwdActivity">
 
     <Button
-        android:id="@+id/pwdUpdateBtn"
+        android:id="@+id/pwdUpdateBtnAdmin"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginStart="149dp"
@@ -25,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/boarderNameUpdatePwd"
+        android:id="@+id/adminNameUpdatePwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
@@ -85,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/newPwdTxt"
+        android:id="@+id/newPwdTxtAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
@@ -97,7 +96,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/confirmPwdTxt"
+        android:id="@+id/confirmPwdTxtAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
