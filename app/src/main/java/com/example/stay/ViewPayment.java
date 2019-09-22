@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ import java.util.List;
 
 import Database.LeaveList;
 import Database.LeaveReq;
+import Database.LoginData;
 import Database.Payments;
 import Database.PaymentsList;
 
@@ -67,31 +69,27 @@ public class ViewPayment extends AppCompatActivity {
 
             }
         });
+
+        Query query = FirebaseDatabase.getInstance().getReference("Payments").orderByChild("userID").equalTo(LoginData.userKey);
+        query.addListenerForSingleValueEvent(valueEventListener);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        dbpRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                payArrayList.clear();
-                for (DataSnapshot PaymentSnapShot : dataSnapshot.getChildren()){
-                    Payments payments1 = PaymentSnapShot.getValue(Payments.class);
-
-                    payArrayList.add(payments1);
-                }
-                PaymentsList list = new PaymentsList(ViewPayment.this,payArrayList);
-                payList.setAdapter(list);
-
+    ValueEventListener valueEventListener = new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            payArrayList.clear();
+            for (DataSnapshot PaymentSnapShot : dataSnapshot.getChildren()){
+                Payments payments1 = PaymentSnapShot.getValue(Payments.class);
+                payArrayList.add(payments1);
             }
+            PaymentsList list = new PaymentsList(ViewPayment.this,payArrayList);
+            payList.setAdapter(list);
+        }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
-    }
+        }
+    };
 }
 

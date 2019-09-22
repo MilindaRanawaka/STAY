@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
+import Database.LoginData;
 import Database.Payments;
 
 public class AddPayment extends AppCompatActivity {
@@ -57,6 +58,13 @@ public class AddPayment extends AppCompatActivity {
         bankSpnr=findViewById(R.id.spinnerBank);
         roomGrp =findViewById(R.id.roomTypepRadio);
         addButton=findViewById(R.id.buttonpAdd);
+
+        boarderID.setText(LoginData.userKey);
+        boarderName.setText(LoginData.userName);
+        boarderPhone.setText(LoginData.userPhNo.toString());
+        boarderID.setEnabled(false);
+        boarderName.setEnabled(false);
+        boarderPhone.setEnabled(false);
 
         pay= new Payments();
 
@@ -115,9 +123,10 @@ public class AddPayment extends AppCompatActivity {
         //implementing the spinner
         //coding for spinner
         final List<String> BankList = Arrays.asList(getResources().getStringArray(R.array.Banks));
-        //initializing a array adapter
+        //creating an array adapter
         final ArrayAdapter<String> SpinnerArrayAdapter= new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,BankList){
             @Override
+            //disabling the first element in the array
             public boolean isEnabled(int position) {
                 if(position ==0){
                     return false;
@@ -148,7 +157,7 @@ public class AddPayment extends AppCompatActivity {
                 dbRefPay= FirebaseDatabase.getInstance().getReference("Payments");
                 if(TextUtils.isEmpty(boarderID.getText().toString())){
                     Toast.makeText(getApplicationContext(),"Please Enter ID",Toast.LENGTH_SHORT).show();
-                    //Toast.makeText(this,"Please Enter ID",Toast.LENGTH_LONG).show();
+
                 }
                 else if(TextUtils.isEmpty(boarderName.getText().toString())){
                     Toast.makeText(getApplicationContext(),"Please Enter Name",Toast.LENGTH_SHORT).show();
@@ -170,8 +179,8 @@ public class AddPayment extends AppCompatActivity {
                 }
                 else{
                     pay.setKey(dbRefPay.push().getKey());
-                    pay.setUserID(boarderID.getText().toString());
-                    pay.setName(boarderName.getText().toString());
+                    pay.setUserID(LoginData.userKey);
+                    pay.setName(LoginData.userName);
                     pay.setPhoneNo(Integer.parseInt(boarderPhone.getText().toString()));
                     pay.setPayAmount(Double.parseDouble(payAmount.getText().toString()));
                     pay.setBank(bankSpnr.getSelectedItem().toString());

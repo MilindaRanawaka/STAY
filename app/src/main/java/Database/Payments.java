@@ -9,6 +9,7 @@ public class Payments {
     private double PayAmount;
     private String Bank;
     private String PayDate;
+    //private String Status;
 
     public Payments() {
     }

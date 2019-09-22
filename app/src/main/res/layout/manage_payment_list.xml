@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3E0EE"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewIDMpay"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:drawableStart="@drawable/ic_action_rev"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/textViewNameMPay"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/textViewAmountPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="18sp" />
+</LinearLayout>

@@ -17,6 +17,7 @@
             android:name=".ManageAdmin"
             android:label="@string/title_activity_manage_admin"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Delete_PaymentActivity"></activity>
         <activity android:name=".UpdateRoomActivity" />
         <activity android:name=".EditBoardersActivity" />
         <activity android:name=".MngLeaveReqActivity" />
