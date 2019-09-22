@@ -8,6 +8,15 @@ public class Order {
     private String bgenre;
     private String ApprovalState;
     private String userKey;
+    private String time;
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
 
     public String getUserKey() {
         return userKey;
@@ -27,6 +36,7 @@ public class Order {
         this.bgenre = bgenre;
         ApprovalState = approvalState;
         this.userKey = userKey;
+
     }
 
     public String getApprovalState() {

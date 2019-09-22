@@ -345,6 +345,7 @@
     <string name="updateAdmin">Update Admin</string>
     <string name="deleteAdmin">Delete Admin</string>
     <string name="welcome">Welcome !!!</string>
+    <string name="foodTime">Time</string>
     <string name="recpayheading">Recieved Payments</string>
     <string name="delpayhead">Payment Details</string>
     <string name="delpaytext1">Payment Key:</string>

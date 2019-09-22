@@ -2,7 +2,9 @@ package com.example.stay;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -27,11 +30,12 @@ import Database.LoginData;
 import Database.Order;
 import Database.OrderList;
 
-public class BoarderRequestFoodActivity extends AppCompatActivity {
+public class BoarderRequestFoodActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
 
     EditText edName;
     EditText edRNo;
-    Button btnOrder;
+    TextView tvShowTime;
+    Button btnOrder,btnTime;
     Spinner spinnerGenres;
     DatabaseReference dbRef;
     Order order;
@@ -40,13 +44,27 @@ public class BoarderRequestFoodActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boarder_request_food);
 
-
+        Button btnTime=(Button) findViewById(R.id.btnTime) ;
+        btnTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment timePicker=new TimePicker();
+                timePicker.show(getSupportFragmentManager(),"time picker");
+            }
+        });
         dbRef = FirebaseDatabase.getInstance().getReference("Order");
 
         edName= findViewById(R.id.edName);
         edRNo= findViewById(R.id.edRNo);
         btnOrder = findViewById(R.id.btnOrder22);
         spinnerGenres = findViewById(R.id.spinner2);
+        btnTime=findViewById(R.id.btnTime);
+        tvShowTime=findViewById(R.id.tvShowTime);
+
+        edName.setText(LoginData.userName);
+        edRNo.setText(LoginData.userRoomNo);
+        edName.setEnabled(false);
+        edRNo.setEnabled(false);
 
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,12 +75,18 @@ public class BoarderRequestFoodActivity extends AppCompatActivity {
 
         }
 
+    @Override
+    public void onTimeSet(android.widget.TimePicker view, int hourOfDay, int minute) {
+        TextView tvShowTime=(TextView)findViewById(R.id.tvShowTime);
+        tvShowTime.setText("Hour:"+hourOfDay+"   "+"Minute:"+minute);
+    }
 
 
     private void addOrder() {
         String name=edName.getText().toString().trim();
         String RoomNo=edRNo.getText().toString().trim();
         String genre = spinnerGenres.getSelectedItem().toString();
+        String time=tvShowTime.getText().toString().trim();
 
         if(!TextUtils.isEmpty(name)){
             String  id=dbRef.push().getKey();
@@ -71,8 +95,6 @@ public class BoarderRequestFoodActivity extends AppCompatActivity {
             dbRef.child(id).setValue(order);
             Toast.makeText(getApplicationContext(),"Adding Success",Toast.LENGTH_LONG).show();
             cleanData();
-        }else{
-            Toast.makeText(getApplicationContext(),"You should Enter a Name",Toast.LENGTH_LONG).show();
         }
     }
 

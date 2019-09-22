@@ -69,6 +69,7 @@ public class BoarderViewFoodActivity extends AppCompatActivity {
     ValueEventListener valueEventListener = new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            orderList.clear();
             for(DataSnapshot orderSnapshot : dataSnapshot.getChildren()){
                 Order order=orderSnapshot.getValue(Order.class);
 

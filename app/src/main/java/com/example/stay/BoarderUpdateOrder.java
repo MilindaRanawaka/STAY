@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -15,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.jar.Attributes;
 
+import Database.LoginData;
 import Database.Order;
 
 public class BoarderUpdateOrder extends AppCompatActivity {
@@ -49,11 +51,21 @@ public class BoarderUpdateOrder extends AppCompatActivity {
         final String orderRoomNo=intent.getStringExtra(BoarderViewFoodActivity.ORDER_ROOMNO);
         final String orderGenre=intent.getStringExtra(BoarderViewFoodActivity.ORDER_GENRE);
 
+
+        ArrayAdapter arrayAdapter=(ArrayAdapter)spinnerGenres.getAdapter();
+        final int spinnerPosition=arrayAdapter.getPosition(orderGenre);
+        spinnerGenres.setSelection(spinnerPosition);
+
         edName.setText(orderName);
         edRNo.setText(orderRoomNo);
 
-
         dbRef = FirebaseDatabase.getInstance().getReference("Order").child(OrderID);
+
+        edName.setText(LoginData.userName);
+        edRNo.setText(LoginData.userRoomNo);
+        edName.setEnabled(false);
+        edRNo.setEnabled(false);
+
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +75,8 @@ public class BoarderUpdateOrder extends AppCompatActivity {
                 order.setRNo(edRNo.getText().toString());
                 order.setBgenre(spinnerGenres.getSelectedItem().toString());
                 order.setApprovalState("Pending");
+                order.setUserKey(LoginData.userKey);
+
 
                 dbRef.setValue(order);
                 Toast.makeText(getApplicationContext(),"Details Updated",Toast.LENGTH_SHORT).show();
