@@ -1,11 +1,16 @@
 package com.example.stay;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.DialogFragment;
 
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -109,5 +114,29 @@ public class BoarderUpdateOrder extends AppCompatActivity implements TimePickerD
     public void onTimeSet(android.widget.TimePicker view, int hourOfDay, int minute) {
         TextView tvShowTime=(TextView)findViewById(R.id.tvShowTime);
         tvShowTime.setText("Hour:"+hourOfDay+"   "+"Minute:"+minute);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.boarder_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case (R.id.itemBoxItem01B):
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                ActivityCompat.finishAffinity(this);
+                startActivity(intent);
+                return true;
+            case(R.id.itemBoxItem02B):
+                Intent intent2 = new Intent(getApplicationContext(),BoarderUpdatePwdActivity.class);
+                startActivity(intent2);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }

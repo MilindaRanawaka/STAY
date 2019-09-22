@@ -359,6 +359,7 @@
     <string name="updatePwd">Update Password</string>
     <string name="enterNewPwd">Enter New Password</string>
     <string name="btnTime">Open Time Picker</string>
+    <string name="requestedTime">Order Requested Time</string>
 
 
 </resources>
