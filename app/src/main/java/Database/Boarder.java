@@ -11,11 +11,12 @@ public class Boarder {
     private Long phNo;
     private String email;
     private String roomNo;
+    private String password;
 
     public Boarder() {
     }
 
-    public Boarder(String key, String name, String dob, String address, String nic, String gender, Long phNo, String email, String roomNo) {
+    public Boarder(String key, String name, String dob, String address, String nic, String gender, Long phNo, String email, String roomNo, String password) {
         this.key = key;
         this.name = name;
         this.dob = dob;
@@ -25,6 +26,15 @@ public class Boarder {
         this.phNo = phNo;
         this.email = email;
         this.roomNo = roomNo;
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getKey() {

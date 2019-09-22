@@ -17,6 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import Database.Admin;
 import Database.Boarder;
+import Database.EncryptDecrypt;
 import Database.LoginData;
 
 public class LoginActivity extends AppCompatActivity {
@@ -53,17 +54,6 @@ public class LoginActivity extends AppCompatActivity {
 
         Query query2 = FirebaseDatabase.getInstance().getReference("Boarders").orderByChild("email").equalTo(str1);
         query2.addListenerForSingleValueEvent(valueEventListener2);
-
-        //edit user login staff
-        //add db con
-        if(num1 == 1){
-            Intent intent = new Intent(this,ManagementHomeActivity.class);
-            startActivity(intent);
-            //try2
-        } else if(num1 == 2){
-            Intent intent2 = new Intent(this, BoardersHomeActivity.class);
-            startActivity(intent2);
-        }
 
     }
 
@@ -110,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
 
         str2 = tv2.getText().toString();
 
-        if(str2.equals(admin.getNic())){
+        if(str2.equals(EncryptDecrypt.decryptIt(admin.getPassword()))){
             LoginData.userKey = admin.getKey();
             LoginData.userName = admin.getName();
             LoginData.userEmail = admin.getEmail();
@@ -126,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
 
         str2 = tv2.getText().toString();
 
-        if(str2.equals(boarder.getNic())){
+        if(str2.equals(EncryptDecrypt.decryptIt(boarder.getPassword()))){
             LoginData.userKey = boarder.getKey();
             LoginData.userName = boarder.getName();
             LoginData.userRoomNo = boarder.getRoomNo();

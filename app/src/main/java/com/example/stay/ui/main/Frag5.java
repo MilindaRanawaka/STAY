@@ -22,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import Database.Admin;
 import Database.Boarder;
+import Database.EncryptDecrypt;
 
 public class Frag5 extends Fragment {
 
@@ -98,6 +99,7 @@ public class Frag5 extends Fragment {
                     admin.setNic(nic.getText().toString());
                     admin.setPhNo(Long.parseLong(phNO.getText().toString()));
                     admin.setEmail(email.getText().toString());
+                    admin.setPassword(EncryptDecrypt.encryptIt(nic.getText().toString()));
 
                     dbRef.child(admin.getKey()).setValue(admin);
 

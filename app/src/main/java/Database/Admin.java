@@ -10,11 +10,12 @@ public class Admin {
     private String gender;
     private Long phNo;
     private String email;
+    private String password;
 
     public Admin() {
     }
 
-    public Admin(String key, String name, String dob, String address, String nic, String gender, Long phNo, String email) {
+    public Admin(String key, String name, String dob, String address, String nic, String gender, Long phNo, String email, String password) {
         this.key = key;
         this.name = name;
         this.dob = dob;
@@ -23,6 +24,15 @@ public class Admin {
         this.gender = gender;
         this.phNo = phNo;
         this.email = email;
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getKey() {
