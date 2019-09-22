@@ -354,6 +354,10 @@
     <string name="delpaybtn1">Delete</string>
     <string name="deletePayTxt">Payment Key:</string>
     <string name="deletePaymentTxt3">Border ID:</string>
+    <string name="newPwd">New Password</string>
+    <string name="confirmPwd">Confirm Password</string>
+    <string name="updatePwd">Update Password</string>
+    <string name="enterNewPwd">Enter New Password</string>
     <string name="btnTime">Open Time Picker</string>
 
 
