@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="47dp"
         android:layout_marginRight="47dp"
         android:width="150dp"
@@ -191,19 +191,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phNoTxtEditB" />
 
-    <Spinner
-        android:id="@+id/roomNoTxtEditB"
-        android:layout_width="215dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="73dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/emailTxtEditB" />
-
     <Button
         android:id="@+id/memUpBtnEditB"
         android:layout_width="wrap_content"
@@ -245,5 +232,20 @@
             android:layout_weight="1"
             android:text="@string/female" />
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/roomNoTxtEditB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/emailTxtEditB" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

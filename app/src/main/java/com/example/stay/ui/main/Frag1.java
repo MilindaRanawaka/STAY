@@ -32,8 +32,6 @@ import Database.Boarder;
 import Database.EncryptDecrypt;
 
 public class Frag1 extends Fragment {
-
-    private static String cryptoPass = "sup3rS3xy";
     EditText name,dob,address,nic,phNO,email;
     Spinner roomNo;
     RadioButton acBtn;
@@ -114,9 +112,6 @@ public class Frag1 extends Fragment {
                     boarder.setRoomNo(roomNo.getSelectedItem().toString());
                     boarder.setPassword(EncryptDecrypt.encryptIt(nic.getText().toString()));
 
-                    Toast.makeText(getContext(),""+EncryptDecrypt.encryptIt(nic.getText().toString())+"",Toast.LENGTH_LONG).show();
-                    Toast.makeText(getContext(),""+EncryptDecrypt.decryptIt(EncryptDecrypt.encryptIt(nic.getText().toString()))+"",Toast.LENGTH_LONG).show();
-
                     dbRef.child(boarder.getKey()).setValue(boarder);
 
                     Toast.makeText(getActivity(),"Data Added Successfully",Toast.LENGTH_SHORT).show();
@@ -163,4 +158,8 @@ public class Frag1 extends Fragment {
         acGrp.clearCheck();
 
     }
+
+
+
+
 }

@@ -103,7 +103,7 @@ public class Frag5 extends Fragment {
 
                     dbRef.child(admin.getKey()).setValue(admin);
 
-                    Toast.makeText(getActivity(),"Data Added Succesfully",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"Data Added Successfully",Toast.LENGTH_SHORT).show();
 
                     Clear();
                 }

@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.tv.TvContract;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -24,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText tv1,tv2;
     String str1,str2;
+    ProgressBar progressBar;
     int num1;
 
     @Override
@@ -34,10 +37,14 @@ public class LoginActivity extends AppCompatActivity {
         tv1 = findViewById(R.id.unText);
 
         str1 = tv1.getText().toString();
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.GONE);
     }
 
     public void onLogin(View view){
 
+
+        progressBar.setVisibility(View.VISIBLE);
 
         tv1 = findViewById(R.id.unText);
 
@@ -84,7 +91,8 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
             else{
-                Toast.makeText(getApplicationContext(),"Check Login Credentials",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"Check Login Credentials",Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
             }
         }
 
@@ -128,6 +136,7 @@ public class LoginActivity extends AppCompatActivity {
         }
         else{
             Toast.makeText(getApplicationContext(),"Check Login Credentials",Toast.LENGTH_SHORT).show();
+            progressBar.setVisibility(View.GONE);
         }
     }
 }

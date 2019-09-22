@@ -6,10 +6,12 @@ import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,8 +35,7 @@ import Database.Boarder;
 public class EditBoardersActivity extends AppCompatActivity {
 
     Boarder boarder;
-    EditText nameTxt,dobTxt,addressTxt,nicTxt,phNoTxt,emailTxt;
-    Spinner roomNoTxt;
+    EditText nameTxt,dobTxt,addressTxt,nicTxt,phNoTxt,emailTxt,roomNoTxt;
     RadioGroup genRadioGrp;
     RadioButton femaleRadioBtm,maleRadioBtn,radioBtn;
     Button updateBtn,deleteBtn;
@@ -79,7 +80,8 @@ public class EditBoardersActivity extends AppCompatActivity {
         nicTxt.setText(nic);
         emailTxt.setText(email);
         phNoTxt.setText(Long.toString(phno));
-        //roomNoTxt.setText(roomNo);
+        roomNoTxt.setText(roomNo);
+        roomNoTxt.setEnabled(false);
 
         if (gender.equals("Male")){
             maleRadioBtn.toggle();
@@ -89,10 +91,6 @@ public class EditBoardersActivity extends AppCompatActivity {
             femaleRadioBtm.toggle();
             boarder.setGender("Female");
         }
-
-        this.fillSpinner();
-
-
 
         dbRef = FirebaseDatabase.getInstance().getReference("Boarders").child(key);
 
@@ -107,14 +105,14 @@ public class EditBoardersActivity extends AppCompatActivity {
                 boarder.setEmail(emailTxt.getText().toString());
                 boarder.setNic(nicTxt.getText().toString());
                 boarder.setPhNo(Long.parseLong(phNoTxt.getText().toString()));
-                //boarder.setRoomNo(roomNoTxt.getText().toString());
+                boarder.setRoomNo(roomNoTxt.getText().toString());
 
                 int selectedId = genRadioGrp.getCheckedRadioButtonId();
                 radioBtn = (RadioButton) findViewById(selectedId);
                 boarder.setGender(radioBtn.getText().toString());
 
                 dbRef.setValue(boarder);
-                Toast.makeText(getApplicationContext(),"Admin Name: "+boarder.getName()+"'s Details Updated",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Boarder Name: "+boarder.getName()+"'s Details Updated",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -122,11 +120,12 @@ public class EditBoardersActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dbRef.removeValue();
-                Toast.makeText(getApplicationContext(),"Admin Details Deleted",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Boarder Details Deleted",Toast.LENGTH_SHORT).show();
             }
         });
     }
 
+    /*
     public void fillSpinner(){
         dbRefRoom.addValueEventListener(new ValueEventListener() {
             @Override
@@ -140,6 +139,7 @@ public class EditBoardersActivity extends AppCompatActivity {
                 ArrayAdapter<String> areasAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, room);
                 areasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 roomNoTxt.setAdapter(areasAdapter);
+
             }
 
             @Override
@@ -148,6 +148,7 @@ public class EditBoardersActivity extends AppCompatActivity {
             }
         });
     }
+     */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

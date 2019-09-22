@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -23,6 +24,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import Database.Boarder;
+import Database.EncryptDecrypt;
 import Database.LoginData;
 
 public class BoarderManageActivity extends AppCompatActivity {
@@ -53,10 +55,34 @@ public class BoarderManageActivity extends AppCompatActivity {
 
         updateBtn = findViewById(R.id.UpdateBtnBB);
 
+        dbRef = FirebaseDatabase.getInstance().getReference("Boarders").child(LoginData.userKey);
+
         Query query = FirebaseDatabase.getInstance().getReference("Boarders").orderByChild("key").equalTo(LoginData.userKey);
         query.addListenerForSingleValueEvent(valueEventListener);
 
         nameTxt.setText(boarder.getName());
+
+        updateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boarder.setKey(LoginData.userKey);
+                boarder.setName(nameTxt.getText().toString());
+                boarder.setDob(dobTxt.getText().toString());
+                boarder.setAddress(addressTxt.getText().toString());
+                boarder.setEmail(emailTxt.getText().toString());
+                boarder.setNic(nicTxt.getText().toString());
+                boarder.setPhNo(Long.parseLong(phNoTxt.getText().toString()));
+
+                int selectedId = genRadioGrp.getCheckedRadioButtonId();
+                radioBtn = (RadioButton) findViewById(selectedId);
+                boarder.setGender(radioBtn.getText().toString());
+
+                boarder.setPassword(EncryptDecrypt.encryptIt(EncryptDecrypt.decryptIt(boarder.getPassword())));
+
+                dbRef.setValue(boarder);
+                Toast.makeText(getApplicationContext(),"Boarder Name: "+boarder.getName()+"'s Details Updated",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     ValueEventListener valueEventListener = new ValueEventListener() {
@@ -64,13 +90,14 @@ public class BoarderManageActivity extends AppCompatActivity {
         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
             if (dataSnapshot.exists()) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Boarder boarder = snapshot.getValue(Boarder.class);
+                    boarder = snapshot.getValue(Boarder.class);
                     nameTxt.setText(boarder.getName());
                     dobTxt.setText(boarder.getDob());
                     addressTxt.setText(boarder.getAddress());
                     nicTxt.setText(boarder.getNic());
                     phNoTxt.setText(boarder.getPhNo().toString());
                     emailTxt.setText(boarder.getEmail());
+
 
                     if (boarder.getGender().equals("Male")){
                         maleRadioBtn.toggle();
