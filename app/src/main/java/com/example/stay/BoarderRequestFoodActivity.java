@@ -90,7 +90,7 @@ public class BoarderRequestFoodActivity extends AppCompatActivity implements Tim
 
         if(!TextUtils.isEmpty(name)){
             String  id=dbRef.push().getKey();
-            order = new Order(id,name,RoomNo,genre,"Pending", LoginData.userKey);
+            order = new Order(id,name,RoomNo,genre,"Pending", LoginData.userKey,time);
 
             dbRef.child(id).setValue(order);
             Toast.makeText(getApplicationContext(),"Adding Success",Toast.LENGTH_LONG).show();

@@ -32,6 +32,7 @@ public class MngFoodRequest extends AppCompatActivity {
     public static final String ORDER_NAME="orderName";
     public static final String ORDER_ROOMNO="orderRoomNo";
     public static final String ORDER_GENRE="orderGenre";
+    public static final String ORDER_TIME="orderTime";
 
 
     @Override
@@ -56,6 +57,7 @@ public class MngFoodRequest extends AppCompatActivity {
                 intent.putExtra(ORDER_NAME,order.getName());
                 intent.putExtra(ORDER_ROOMNO,order.getRNo());
                 intent.putExtra(ORDER_GENRE,order.getBgenre());
+                intent.putExtra(ORDER_TIME,order.getTime());
 
                 startActivity(intent);
             }
@@ -69,6 +71,7 @@ public class MngFoodRequest extends AppCompatActivity {
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                orderList.clear();
                 for(DataSnapshot orderSnapshot : dataSnapshot.getChildren()){
                     Order order=orderSnapshot.getValue(Order.class);
 

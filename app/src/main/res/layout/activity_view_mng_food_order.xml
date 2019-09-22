@@ -3,8 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view_mng_food_order">
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvName6"
+        android:layout_width="262dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="100dp"
+        android:background="#DCC5A9F7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvName2"

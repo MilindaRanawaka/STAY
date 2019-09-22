@@ -34,6 +34,7 @@ public class BoarderViewFoodActivity extends AppCompatActivity {
     public static final String ORDER_NAME="orderName";
     public static final String ORDER_ROOMNO="orderRoomNo";
     public static final String ORDER_GENRE="orderGenre";
+    public static final String ORDER_TIME="orderTime";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,7 @@ public class BoarderViewFoodActivity extends AppCompatActivity {
                 intent.putExtra(ORDER_NAME,order.getName());
                 intent.putExtra(ORDER_ROOMNO,order.getRNo());
                 intent.putExtra(ORDER_GENRE,order.getBgenre());
+                intent.putExtra(ORDER_TIME,order.getTime());
 
                 startActivity(intent);
             }

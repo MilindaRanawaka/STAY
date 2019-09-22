@@ -354,6 +354,7 @@
     <string name="delpaybtn1">Delete</string>
     <string name="deletePayTxt">Payment Key:</string>
     <string name="deletePaymentTxt3">Border ID:</string>
+    <string name="btnTime">Open Time Picker</string>
 
 
 </resources>

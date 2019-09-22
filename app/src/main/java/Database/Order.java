@@ -29,7 +29,17 @@ public class Order {
     public Order() {
     }
 
-    public Order(String orderID, String name, String RNo, String bgenre, String approvalState, String userKey) {
+    public Order(String orderID, String name, String RNo, String bgenre, String approvalState, String userKey, String time) {
+        this.orderID = orderID;
+        Name = name;
+        this.RNo = RNo;
+        this.bgenre = bgenre;
+        ApprovalState = approvalState;
+        this.userKey = userKey;
+        this.time = time;
+    }
+
+    /*public Order(String orderID, String name, String RNo, String bgenre, String approvalState, String userKey) {
         this.orderID = orderID;
         Name = name;
         this.RNo = RNo;
@@ -37,7 +47,7 @@ public class Order {
         ApprovalState = approvalState;
         this.userKey = userKey;
 
-    }
+    }*/
 
     public String getApprovalState() {
         return ApprovalState;
