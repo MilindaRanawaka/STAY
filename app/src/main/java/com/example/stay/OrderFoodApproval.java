@@ -3,7 +3,9 @@ package com.example.stay;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
 
+import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -28,14 +30,18 @@ public class OrderFoodApproval extends AppCompatActivity {
     TextView tvRNo2;
     Button btnAccept;
     Button btnReject;
+    Button btnDelete;
     TextView tvOrder;
     DatabaseReference dbRef;
+
+    private NotificationHelper mNotificationHelper;
 
     public static final String ORDER_ID="orderID";
     public static final String ORDER_NAME="orderName";
     public static final String ORDER_ROOMNO="orderRoomNo";
     public static final String ORDER_GENRE="orderGenre";
     public static final String ORDER_TIME="orderTime";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +56,7 @@ public class OrderFoodApproval extends AppCompatActivity {
         btnReject=findViewById(R.id.btnReject);
         tvOrder = findViewById(R.id.tvOrder);
         tvShowTime2=findViewById(R.id.tvShowTime2);
+        btnDelete=findViewById(R.id.btnDelete);
 
         order = new Order();
 
@@ -68,6 +75,7 @@ public class OrderFoodApproval extends AppCompatActivity {
 
         dbRef = FirebaseDatabase.getInstance().getReference("Order").child(OrderID);
 
+        mNotificationHelper=new NotificationHelper(this);
         btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +89,7 @@ public class OrderFoodApproval extends AppCompatActivity {
                 dbRef.setValue(order);
                 Toast.makeText(getApplicationContext(),"Order Accepted",Toast.LENGTH_SHORT).show();
 
-
+                sendOnAccept();
             }
         });
 
@@ -98,8 +106,26 @@ public class OrderFoodApproval extends AppCompatActivity {
 
                 dbRef.setValue(order);
                 Toast.makeText(getApplicationContext(),"Order Rejected",Toast.LENGTH_SHORT).show();
+
+                sendOnReject();
             }
         });
+    }
+
+    public void onDelete(View view){
+        dbRef.removeValue();
+        Toast.makeText(getApplicationContext(),"Details Delete",Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void sendOnAccept(){
+        NotificationCompat.Builder nb=mNotificationHelper.getAcceptNotification();
+        mNotificationHelper.getManager().notify(1,nb.build());
+    }
+
+    public void sendOnReject(){
+        NotificationCompat.Builder nb=mNotificationHelper.getRejectNotification();
+        mNotificationHelper.getManager().notify(2,nb.build());
     }
 
     @Override

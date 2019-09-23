@@ -48,6 +48,7 @@ public class BoarderRequestFoodActivity extends AppCompatActivity implements Tim
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boarder_request_food);
 
+
         Button btnTime=(Button) findViewById(R.id.btnTime) ;
         btnTime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +57,7 @@ public class BoarderRequestFoodActivity extends AppCompatActivity implements Tim
                 timePicker.show(getSupportFragmentManager(),"time picker");
             }
         });
+
         dbRef = FirebaseDatabase.getInstance().getReference("Order");
 
         edName= findViewById(R.id.edName);
@@ -84,7 +86,6 @@ public class BoarderRequestFoodActivity extends AppCompatActivity implements Tim
         TextView tvShowTime=(TextView)findViewById(R.id.tvShowTime);
         tvShowTime.setText("Hour:"+hourOfDay+"   "+"Minute:"+minute);
     }
-
 
     private void addOrder() {
         String name=edName.getText().toString().trim();
