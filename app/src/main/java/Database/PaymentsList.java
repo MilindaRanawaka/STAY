@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,35 +16,37 @@ import java.util.List;
 
 public class PaymentsList extends ArrayAdapter<Payments> {
 
-    private Activity context;
-    private List<Payments> payList;
+   private Activity context;
+   private List<Payments> paymentsList;
 
-    public PaymentsList(Activity context,List<Payments>payList){
-
-        super(context, R.layout.list_payments);
-        this.context=context;
-        this.payList=payList;
-    }
+   public PaymentsList(Activity context,List<Payments> paymentsList){
+       super(context,R.layout.list_payments,paymentsList);
+       this.context =context;
+       this.paymentsList=paymentsList;
+   }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater inflater= context.getLayoutInflater();
-        View listViewItem =inflater.inflate(R.layout.list_payments,null,true);{
-            TextView PayDateItem =listViewItem.findViewById(R.id.ViewDatepay);
-            TextView PayAmountItem=listViewItem.findViewById(R.id.viewAmountPay);
-            TextView PayBoarderIDItem=listViewItem.findViewById(R.id.viewBiD);
-            TextView PayRoomTypeItem=listViewItem.findViewById(R.id.ViewRoomType);
+        LayoutInflater inflater =context.getLayoutInflater();
 
-            Payments payments= payList.get(position);
+        View pastPayView =inflater.inflate(R.layout.list_payments,null,true);
+        TextView datePay = pastPayView.findViewById(R.id.ViewDatepay);
+        TextView amountPay = pastPayView.findViewById(R.id.viewAmountPay);
+        TextView roomtPay = pastPayView.findViewById(R.id.ViewRoomType);
+        TextView payStatus = pastPayView.findViewById(R.id.viewPayStatus);
+        TextView payName = pastPayView.findViewById(R.id.ViewPayName);
 
-            PayDateItem.setText(payments.getPayDate());
-            PayAmountItem.setText(Double.toString(payments.getPayAmount()));
-            PayBoarderIDItem.setText(payments.getUserID());
-            PayRoomTypeItem.setText(payments.getRoomType());
+        Payments userViewPay =paymentsList.get(position);
+        datePay.setText(userViewPay.getPayDate());
+        amountPay.setText(Double.toString(userViewPay.getPayAmount()));
+        roomtPay.setText(userViewPay.getRoomType());
+        payStatus.setText(userViewPay.getStatus());
+        payName.setText(userViewPay.getName());
 
-            return  listViewItem;
-        }
+
+        return  pastPayView;
+
     }
 }
 

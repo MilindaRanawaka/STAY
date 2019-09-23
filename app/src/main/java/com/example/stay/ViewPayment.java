@@ -2,9 +2,13 @@ package com.example.stay;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -39,6 +43,7 @@ public class ViewPayment extends AppCompatActivity {
     public static final String PAY_AMOUNT = "paymentAmount";
     public static final String PAY_BANK = "paymentBank";
     public static final String PAY_DATE = "paymentDate";
+    public static  final String PAY_STATUS="status";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +54,7 @@ public class ViewPayment extends AppCompatActivity {
 
         payArrayList= new ArrayList<>();
 
-       payList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+      /* payList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
@@ -64,14 +69,17 @@ public class ViewPayment extends AppCompatActivity {
                 intentpay.putExtra(PAY_AMOUNT,payView.getPayAmount());
                 intentpay.putExtra(PAY_BANK,payView.getBank());
                 intentpay.putExtra(PAY_DATE,payView.getPayDate());
+                intentpay.putExtra(PAY_STATUS,payView.getStatus());
 
                 startActivity(intentpay);
 
             }
-        });
+       }); */
 
         Query query = FirebaseDatabase.getInstance().getReference("Payments").orderByChild("userID").equalTo(LoginData.userKey);
         query.addListenerForSingleValueEvent(valueEventListener);
+        Query queryO=FirebaseDatabase.getInstance().getReference("Payments").orderByChild("status").equalTo("Accepted");
+        queryO.addListenerForSingleValueEvent(valueEventListener);
     }
 
     ValueEventListener valueEventListener = new ValueEventListener() {
@@ -91,5 +99,34 @@ public class ViewPayment extends AppCompatActivity {
 
         }
     };
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.boarder_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case (R.id.itemBoxItem01B):
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                ActivityCompat.finishAffinity(this);
+                startActivity(intent);
+                return true;
+            case(R.id.itemBoxItem02B):
+                Intent intent2 = new Intent(getApplicationContext(),BoarderUpdatePwdActivity.class);
+                startActivity(intent2);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
+
+
+
 }
 

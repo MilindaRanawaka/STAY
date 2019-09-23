@@ -22,17 +22,19 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
+        android:text="@string/deletePayTxt"
         android:textSize="18sp"
-        tools:text="@string/deletePayTxt"
         tools:visibility="visible" />
 
     <TextView
         android:id="@+id/textViewDPayKey"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:gravity="bottom|center_horizontal" />
+        android:gravity="bottom|center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textView14-1"
@@ -40,17 +42,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:text="@string/deletePaymentTxt3"
         android:textSize="18sp"
-        android:visibility="visible"
-        tools:text="@string/deletePaymentTxt3" />
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/textViewDPayID"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:gravity="bottom|center_horizontal" />
+        android:gravity="bottom|center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textView18"
@@ -65,17 +69,107 @@
     <TextView
         android:id="@+id/textViewDPayName"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:gravity="bottom|center_horizontal" />
+        android:gravity="bottom|center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/delpaydatetxt"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewDPayDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="bottom|center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/delpayAmttxt"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewDPayAmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="bottom|center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/delpayBnktxt"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewDPayBnkk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="bottom|center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/delpaystattxt"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewDPayStat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="bottom|center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/buttonupdatestat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="80dp"
+        android:background="#AE92DF"
+        android:text="@string/delpaystatus" />
 
     <Button
         android:id="@+id/buttondelpay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="80dp"
+        android:background="#A38BDF"
         android:text="@string/delpaybtn1" />
+
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.example.stay;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -11,6 +12,9 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -93,7 +97,7 @@ public class AddPayment extends AppCompatActivity {
         datasetListner = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                //month= month+1;
+                month= month+1;
                 Log.d(TAG,"on data set: mm/dd/yyyy" + month +"/"+ day +"/"+ year);
                 String date = month + "/" + day + "/" + year;
                 payDate.setText(date);
@@ -185,6 +189,7 @@ public class AddPayment extends AppCompatActivity {
                     pay.setPayAmount(Double.parseDouble(payAmount.getText().toString()));
                     pay.setBank(bankSpnr.getSelectedItem().toString());
                     pay.setPayDate(payDate.getText().toString());
+                    pay.setStatus("Pending");
 
                     dbRefPay.child(pay.getKey()).setValue(pay);
                     Toast.makeText(getApplicationContext(),"Data Added Succesfully",Toast.LENGTH_SHORT).show();
@@ -211,12 +216,33 @@ public class AddPayment extends AppCompatActivity {
         bankSpnr.setSelection(0);
         payDate.setText("");
 
-
-
     }
 
-    public void openCompletePayment(View view) {
-        Intent intent2= new Intent(this,CompletePayment.class);
-        startActivity(intent2);
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.boarder_menu,menu);
+        return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case (R.id.itemBoxItem01B):
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                ActivityCompat.finishAffinity(this);
+                startActivity(intent);
+                return true;
+            case(R.id.itemBoxItem02B):
+                Intent intent2 = new Intent(getApplicationContext(),BoarderUpdatePwdActivity.class);
+                startActivity(intent2);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
+
+
 }

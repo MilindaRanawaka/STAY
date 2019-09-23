@@ -36,11 +36,13 @@ public class PaymentManagerList extends ArrayAdapter<Payments> {
         TextView idPay = listViewItemMPay.findViewById(R.id.textViewIDMpay);
         TextView namePay = listViewItemMPay.findViewById(R.id.textViewNameMPay);
         TextView amountPay=listViewItemMPay.findViewById(R.id.textViewAmountPay);
+        TextView statusPay=listViewItemMPay.findViewById(R.id.textViewStatusPay);
 
         Payments payManage = PaymentsManageList.get(position);
         idPay.setText(payManage.getUserID());
         namePay.setText(payManage.getName());
         amountPay.setText(Double.toString(payManage.getPayAmount()));
+        statusPay.setText(payManage.getStatus());
 
         return listViewItemMPay;
 

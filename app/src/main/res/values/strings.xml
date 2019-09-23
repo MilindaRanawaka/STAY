@@ -359,12 +359,21 @@
     <string name="delpaybtn1">Delete</string>
     <string name="deletePayTxt">Payment Key:</string>
     <string name="deletePaymentTxt3">Border ID:</string>
+    <string name="managelisttxt">Border ID</string>
+    <string name="delpaystatus">Update Status</string>
+    <string name="delpayRTtxt">Room Type</string>
+    <string name="delpayAmttxt">Amount</string>
+    <string name="delpayBnktxt">Bank</string>
+    <string name="delpaystattxt">Status</string>
+    <string name="delpaydatetxt">Recieved Date</string>
     <string name="newPwd">New Password</string>
     <string name="confirmPwd">Confirm Password</string>
     <string name="updatePwd">Update Password</string>
     <string name="enterNewPwd">Enter New Password</string>
     <string name="btnTime">Open Time Picker</string>
     <string name="requestedTime">Order Requested Time</string>
+    <string name="Pendingpaymsg">Pending Payments</string>
+    <string name="acceptedpay">Accepted Payments</string>
     <string name="editRoomBoarder">Edit Room</string>
     <string name="roomNoNew">New Room No</string>
 

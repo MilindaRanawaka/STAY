@@ -9,12 +9,12 @@ public class Payments {
     private double PayAmount;
     private String Bank;
     private String PayDate;
-    //private String Status;
+    private String Status;
 
     public Payments() {
     }
 
-    public Payments(String key, String userID, String name, int phoneNo, String roomType, double payAmount, String bank, String payDate) {
+    public Payments(String key, String userID, String name, int phoneNo, String roomType, double payAmount, String bank, String payDate,String status) {
         Key = key;
         UserID = userID;
         Name = name;
@@ -23,6 +23,7 @@ public class Payments {
         PayAmount = payAmount;
         Bank = bank;
         PayDate = payDate;
+        Status =status;
     }
 
     public String getKey() {
@@ -87,5 +88,13 @@ public class Payments {
 
     public void setPayDate(String payDate) {
         PayDate = payDate;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
     }
 }

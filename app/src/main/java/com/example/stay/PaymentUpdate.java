@@ -33,7 +33,7 @@ public class PaymentUpdate extends AppCompatActivity {
 
 
 
-        payments= new Payments();
+        /*payments= new Payments();
 
         UIDupdate  = findViewById(R.id.IDPayUpdt);
         PayNameUpdate = findViewById(R.id.NamePayUpdate);
@@ -55,6 +55,7 @@ public class PaymentUpdate extends AppCompatActivity {
         final String PayRoomType = intent.getStringExtra(ViewPayment.PAY_ROOMTYPE);
         final double PayAmount = intent.getDoubleExtra(ViewPayment.PAY_AMOUNT,0.0);
         final String PayDate = intent.getStringExtra(ViewPayment.PAY_DATE);
+        final String PayStatus = intent.getStringExtra(ViewPayment.PAY_STATUS);
 
         UIDupdate.setText(PayId);
         PayNameUpdate.setText(PayName);
@@ -66,15 +67,15 @@ public class PaymentUpdate extends AppCompatActivity {
             RadioU2.toggle();
             payments.setRoomType("AC");
         }
-        else if(PayRoomType.equals("Non AC")){
+        else if(PayRoomType.equals("Non Ac")){
             RadioU1.toggle();
-            payments.setRoomType("Non AC");
+            payments.setRoomType("Non Ac");
         }
 
 
-        dbPayUpRef = FirebaseDatabase.getInstance().getReference("Payments").child(key);
+        dbPayUpRef = FirebaseDatabase.getInstance().getReference("Payments").child(key);*/
 
-        UpdatePBtn.setOnClickListener(new View.OnClickListener() {
+       /* UpdatePBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -84,7 +85,7 @@ public class PaymentUpdate extends AppCompatActivity {
                 payments.setPhoneNo(Integer.parseInt(PayPhoneUpdate.getText().toString()));
                 payments.setPayAmount(Double.parseDouble(PayAmountUpdate.getText().toString()));
                 payments.setPayDate(PayDateUpdate.getText().toString());
-
+                payments.setStatus("Pending");
                 int selectedPid =TypeGrpU.getCheckedRadioButtonId();
                 RadioU=(RadioButton) findViewById(selectedPid);
                 payments.setRoomType(RadioU.getText().toString());
@@ -93,7 +94,7 @@ public class PaymentUpdate extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(),"Details Updated",Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
     }
 
 

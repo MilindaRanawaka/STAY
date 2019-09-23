@@ -6,13 +6,24 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="@string/managelisttxt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="italic" />
+
+    <TextView
         android:id="@+id/textViewIDMpay"
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:drawableStart="@drawable/ic_action_rev"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewNameMPay"
@@ -31,4 +42,14 @@
         android:layout_marginRight="50dp"
         android:gravity="center_horizontal|center_vertical"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewStatusPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 </LinearLayout>
