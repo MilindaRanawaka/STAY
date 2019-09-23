@@ -360,6 +360,8 @@
     <string name="enterNewPwd">Enter New Password</string>
     <string name="btnTime">Open Time Picker</string>
     <string name="requestedTime">Order Requested Time</string>
+    <string name="editRoomBoarder">Edit Room</string>
+    <string name="roomNoNew">New Room No</string>
 
 
 </resources>

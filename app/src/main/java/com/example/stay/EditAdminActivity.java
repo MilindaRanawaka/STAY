@@ -24,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import Database.Admin;
 import Database.Boarder;
+import Database.EncryptDecrypt;
 
 public class EditAdminActivity extends AppCompatActivity {
 
@@ -63,6 +64,7 @@ public class EditAdminActivity extends AppCompatActivity {
         final String gender = intent.getStringExtra(Frag6.ADMIN_GENDER);
         final String nic = intent.getStringExtra(Frag6.ADMIN_NIC);
         final Long phno = intent.getLongExtra(Frag6.ADMIN_PHNO,0);
+        final String password = intent.getStringExtra(Frag6.ADMIN_PASSWORD);
 
         nameTxt.setText(name);
         dobTxt.setText(dob);
@@ -94,6 +96,7 @@ public class EditAdminActivity extends AppCompatActivity {
                 admin.setEmail(emailTxt.getText().toString());
                 admin.setNic(nicTxt.getText().toString());
                 admin.setPhNo(Long.parseLong(phNoTxt.getText().toString()));
+                admin.setPassword(EncryptDecrypt.encryptIt(password));
 
                 dbRef.setValue(admin);
                 Toast.makeText(getApplicationContext(),"Admin Name : "+admin.getName()+"'s Details Updated",Toast.LENGTH_SHORT).show();

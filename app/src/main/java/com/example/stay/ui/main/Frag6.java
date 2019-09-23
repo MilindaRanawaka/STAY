@@ -27,6 +27,7 @@ import Database.Admin;
 import Database.AdminList;
 import Database.Boarder;
 import Database.BoarderList;
+import Database.EncryptDecrypt;
 
 public class Frag6 extends Fragment {
 
@@ -42,6 +43,7 @@ public class Frag6 extends Fragment {
     public static final String ADMIN_PHNO = "adminPHNO";
     public static final String ADMIN_EMAIL = "adminEMAIL";
     public static final String ADMIN_KEY = "adminKey";
+    public static final String ADMIN_PASSWORD = "adminPassword";
 
     @Nullable
     @Override
@@ -65,6 +67,7 @@ public class Frag6 extends Fragment {
                 intent.putExtra(ADMIN_PHNO,boarder.getPhNo());
                 intent.putExtra(ADMIN_EMAIL,boarder.getEmail());
                 intent.putExtra(ADMIN_KEY,boarder.getKey());
+                intent.putExtra(ADMIN_PASSWORD, EncryptDecrypt.decryptIt(boarder.getPassword()));
 
 
                 startActivity(intent);

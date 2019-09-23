@@ -25,6 +25,7 @@ import java.util.List;
 
 import Database.Boarder;
 import Database.BoarderList;
+import Database.EncryptDecrypt;
 import Database.Room;
 import Database.RoomList;
 
@@ -43,6 +44,7 @@ public class Frag2 extends Fragment {
     public static final String BOARDER_EMAIL = "boarderEMAIL";
     public static final String BOARDER_ROOMNO = "boarderROOMNO";
     public static final String BOARDER_KEY = "boarderKey";
+    public static final String Boarder_PASSWORD = "boarderPassword";
 
 
 
@@ -71,6 +73,7 @@ public class Frag2 extends Fragment {
                 intent.putExtra(BOARDER_EMAIL,boarder.getEmail());
                 intent.putExtra(BOARDER_ROOMNO,boarder.getRoomNo());
                 intent.putExtra(BOARDER_KEY,boarder.getKey());
+                intent.putExtra(Boarder_PASSWORD, EncryptDecrypt.decryptIt(boarder.getPassword()));
 
 
                 startActivity(intent);

@@ -31,9 +31,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Database.Boarder;
+import Database.EncryptDecrypt;
 
 public class EditBoardersActivity extends AppCompatActivity {
 
+    Spinner newRoom;
     Boarder boarder;
     EditText nameTxt,dobTxt,addressTxt,nicTxt,phNoTxt,emailTxt,roomNoTxt;
     RadioGroup genRadioGrp;
@@ -61,6 +63,9 @@ public class EditBoardersActivity extends AppCompatActivity {
         genRadioGrp = findViewById(R.id.radioGroupEditB);
         updateBtn = findViewById(R.id.memUpBtnEditB);
         deleteBtn = findViewById(R.id.memDelBtnEditB);
+        newRoom = findViewById(R.id.newRoomNoSpinner);
+
+        fillSpinner();
 
         Intent intent = getIntent();
 
@@ -73,6 +78,7 @@ public class EditBoardersActivity extends AppCompatActivity {
         final String nic = intent.getStringExtra(Frag2.BOARDER_NIC);
         final Long phno = intent.getLongExtra(Frag2.BOARDER_PHNO,0);
         final String roomNo = intent.getStringExtra(Frag2.BOARDER_ROOMNO);
+        final String password = intent.getStringExtra(Frag2.Boarder_PASSWORD);
 
         nameTxt.setText(name);
         dobTxt.setText(dob);
@@ -106,6 +112,8 @@ public class EditBoardersActivity extends AppCompatActivity {
                 boarder.setNic(nicTxt.getText().toString());
                 boarder.setPhNo(Long.parseLong(phNoTxt.getText().toString()));
                 boarder.setRoomNo(roomNoTxt.getText().toString());
+                boarder.setRoomNo(newRoom.getSelectedItem().toString());
+                boarder.setPassword(EncryptDecrypt.encryptIt(password));
 
                 int selectedId = genRadioGrp.getCheckedRadioButtonId();
                 radioBtn = (RadioButton) findViewById(selectedId);
@@ -124,31 +132,6 @@ public class EditBoardersActivity extends AppCompatActivity {
             }
         });
     }
-
-    /*
-    public void fillSpinner(){
-        dbRefRoom.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                final List<String> room = new ArrayList<String>();
-
-                for (DataSnapshot areaSnapshot: dataSnapshot.getChildren()) {
-                    String roomID = areaSnapshot.child("roomID").getValue(String.class);
-                    room.add(roomID);
-                }
-                ArrayAdapter<String> areasAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, room);
-                areasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                roomNoTxt.setAdapter(areasAdapter);
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
-     */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -173,6 +156,28 @@ public class EditBoardersActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    public void fillSpinner(){
+        dbRefRoom.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                final List<String> room = new ArrayList<String>();
+
+                for (DataSnapshot areaSnapshot: dataSnapshot.getChildren()) {
+                    String roomID = areaSnapshot.child("roomID").getValue(String.class);
+                    room.add(roomID);
+                }
+                ArrayAdapter<String> areasAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, room);
+                areasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                newRoom.setAdapter(areasAdapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
 }
