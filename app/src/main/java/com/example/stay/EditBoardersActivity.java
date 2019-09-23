@@ -129,6 +129,7 @@ public class EditBoardersActivity extends AppCompatActivity {
             public void onClick(View view) {
                 dbRef.removeValue();
                 Toast.makeText(getApplicationContext(),"Boarder Details Deleted",Toast.LENGTH_SHORT).show();
+                Clear();
             }
         });
     }
@@ -178,6 +179,18 @@ public class EditBoardersActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void Clear(){
+        nameTxt.setText("");
+        dobTxt.setText("");
+        addressTxt.setText("");
+        nicTxt.setText("");
+        phNoTxt.setText("");
+        emailTxt.setText("");
+        genRadioGrp.clearCheck();
+        roomNoTxt.setText("");
+
     }
 
 }

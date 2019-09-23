@@ -98,7 +98,8 @@ public class UpdateRoomActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dbRef.removeValue();
-                Toast.makeText(getApplicationContext(),"Room No: "+room.getRoomID()+" Deleted",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Room Deleted",Toast.LENGTH_SHORT).show();
+                clear();
             }
         });
 
@@ -128,4 +129,12 @@ public class UpdateRoomActivity extends AppCompatActivity {
 
         }
     }
+
+    public void clear(){
+        roomNo.setText("");
+        capacity.setText("");
+        price.setText("");
+        acGrp.clearCheck();
+    }
+
 }

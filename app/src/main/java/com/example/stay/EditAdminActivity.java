@@ -108,6 +108,7 @@ public class EditAdminActivity extends AppCompatActivity {
             public void onClick(View view) {
                 dbRef.removeValue();
                 Toast.makeText(getApplicationContext(),"Admin Details Deleted",Toast.LENGTH_SHORT).show();
+                clear();
             }
         });
     }
@@ -135,5 +136,14 @@ public class EditAdminActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    public void clear(){
+        nameTxt.setText("");
+        addressTxt.setText("");
+        nicTxt.setText("");
+        phNoTxt.setText("");
+        emailTxt.setText("");
+        genRadioGrp.clearCheck();
     }
 }

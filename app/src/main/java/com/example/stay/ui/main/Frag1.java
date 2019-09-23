@@ -154,7 +154,6 @@ public class Frag1 extends Fragment {
         nic.setText("");
         phNO.setText("");
         email.setText("");
-        addBtn.setText("");
         acGrp.clearCheck();
 
     }
