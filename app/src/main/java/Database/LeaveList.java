@@ -1,7 +1,6 @@
 package Database;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import com.example.stay.R;
 
@@ -34,10 +32,10 @@ public class LeaveList extends ArrayAdapter<LeaveReq> {
 
         View listViewItem = inflater.inflate(R.layout.leave_layout_list,null,true);
 
-        TextView nameTextView =(TextView) listViewItem.findViewById(R.id.nameTextView22);
-        TextView noTextView =(TextView) listViewItem.findViewById(R.id.roomTextView22);
-        TextView leaveReasonTextView =(TextView) listViewItem.findViewById(R.id.leaveReasonTextView22);
-        TextView dateTextView =(TextView) listViewItem.findViewById(R.id.dateTextView22);
+        TextView nameTextView =(TextView) listViewItem.findViewById(R.id.ManageNameTextView22);
+        TextView noTextView =(TextView) listViewItem.findViewById(R.id.ManageRoomTextView22);
+        TextView leaveReasonTextView =(TextView) listViewItem.findViewById(R.id.ManageLeaveReasonTextView22);
+        TextView dateTextView =(TextView) listViewItem.findViewById(R.id.ManageDateTextView22);
 
         LeaveReq leaveReq = leaveReqList.get(position);
 

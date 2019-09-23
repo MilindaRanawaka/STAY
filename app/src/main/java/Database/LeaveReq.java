@@ -10,6 +10,8 @@ public class LeaveReq {
     private String leaveTime;
     private String arivalDate;
     private String arivalTime;
+    private String status;
+    private String userKey;
 
     public LeaveReq() {
     }
@@ -84,5 +86,21 @@ public class LeaveReq {
 
     public void setArivalTime(String arivalTime) {
         this.arivalTime = arivalTime;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getUserKey() {
+        return userKey;
+    }
+
+    public void setUserKey(String userKey) {
+        this.userKey = userKey;
     }
 }

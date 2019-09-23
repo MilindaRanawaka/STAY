@@ -16,6 +16,11 @@
         <item>Special Soup</item>
     </array>
 
+    <array name="type">
+        <item>Early Leave</item>
+        <item>Late Arrival</item>
+    </array>
+
     <string name="app_name">STAY</string>
 
     <string name="uName">User Name</string>
@@ -363,5 +368,7 @@
     <string name="editRoomBoarder">Edit Room</string>
     <string name="roomNoNew">New Room No</string>
 
+    <string name="Btn_Accept">ACCEPT</string>
+    <string name="Btn_Decline">DECLINE</string>
 
 </resources>
